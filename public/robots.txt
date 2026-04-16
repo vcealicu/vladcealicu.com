@@ -1,0 +1,7 @@
+# vladcealicu.com
+# Static html, no trackers, no cookies.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://vladcealicu.com/sitemap.xml
