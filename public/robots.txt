@@ -4,4 +4,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vladcealicu.com/sitemap.xml
+Sitemap: https://www.vladcealicu.com/sitemap.xml

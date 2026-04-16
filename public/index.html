@@ -9,7 +9,7 @@
 <meta name="author" content="Vlad Cealicu">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#111111">
-<link rel="canonical" href="https://vladcealicu.com/">
+<link rel="canonical" href="https://www.vladcealicu.com/">
 
 <!-- Favicons -->
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
@@ -21,11 +21,11 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="profile">
-<meta property="og:site_name" content="vladcealicu.com">
+<meta property="og:site_name" content="www.vladcealicu.com">
 <meta property="og:title" content="Vlad Cealicu. Founder of LocalGhost.ai">
 <meta property="og:description" content="Founder of LocalGhost.ai. Previously co-founder and CTO of CryptoCompare / CCData. Backends in Go and Node, writing on sovereignty, AI, and incentive design.">
-<meta property="og:url" content="https://vladcealicu.com/">
-<meta property="og:image" content="https://vladcealicu.com/images/og-image.png">
+<meta property="og:url" content="https://www.vladcealicu.com/">
+<meta property="og:image" content="https://www.vladcealicu.com/images/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Vlad Cealicu, founder of LocalGhost.ai, previously CTO at CCData.">
@@ -40,7 +40,7 @@
 <meta name="twitter:creator" content="@vcealicu">
 <meta name="twitter:title" content="Vlad Cealicu. Founder of LocalGhost.ai">
 <meta name="twitter:description" content="Founder of LocalGhost.ai. Previously co-founder and CTO of CryptoCompare / CCData. Backends in Go and Node.">
-<meta name="twitter:image" content="https://vladcealicu.com/images/og-image.png">
+<meta name="twitter:image" content="https://www.vladcealicu.com/images/og-image.png">
 <meta name="twitter:image:alt" content="Vlad Cealicu, founder of LocalGhost.ai.">
 
 <!-- JSON-LD structured data -->
@@ -49,14 +49,14 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Vlad Cealicu",
-  "url": "https://vladcealicu.com/",
-  "image": "https://vladcealicu.com/images/vlad.png",
+  "url": "https://www.vladcealicu.com/",
+  "image": "https://www.vladcealicu.com/images/vlad.png",
   "jobTitle": "Founder",
   "description": "Founder of LocalGhost.ai. Previously co-founder and CTO of CryptoCompare / CCData (acquired by CoinDesk, October 2024).",
   "worksFor": {
     "@type": "Organization",
     "name": "LocalGhost",
-    "url": "https://localghost.ai/"
+    "url": "https://www.localghost.ai/"
   },
   "alumniOf": [
     {
@@ -72,7 +72,7 @@
     "https://x.com/vcealicu",
     "https://uk.linkedin.com/in/vcealicu",
     "https://medium.com/@vcealicu",
-    "https://localghost.ai/"
+    "https://www.localghost.ai/"
   ]
 }
 </script>
@@ -80,8 +80,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "url": "https://vladcealicu.com/",
-  "name": "vladcealicu.com",
+  "url": "https://www.vladcealicu.com/",
+  "name": "www.vladcealicu.com",
   "author": { "@type": "Person", "name": "Vlad Cealicu" }
 }
 </script>
@@ -186,8 +186,8 @@
     margin-bottom: 1.5rem;
   }
   .avatar {
-    width: 96px;
-    height: 96px;
+    width: clamp(120px, 18vw, 160px);
+    height: clamp(120px, 18vw, 160px);
     flex-shrink: 0;
     border: 1px solid var(--terminal-dim);
     padding: 4px;
@@ -232,14 +232,23 @@
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     line-height: 1.15;
-    margin: 0 0 1rem;
+    margin: 0 0 0.35rem;
     color: var(--text);
     letter-spacing: -0.01em;
+  }
+  .role-line {
+    color: var(--text);
+    font-size: 14px;
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+  .role-line .when-inline {
+    color: var(--text-dim);
+    margin-left: 0.4rem;
   }
   .tagline {
     color: var(--text-dim);
     font-size: 1.05rem;
-    max-width: 60ch;
     margin: 0 0 1.5rem;
   }
   .hero-meta {
@@ -255,6 +264,136 @@
     opacity: 0.75;
   }
   .hero-note .comment { color: var(--terminal-dim); }
+
+  /* Hero monitor, animated daemon status panel */
+  .hero-monitor {
+    width: 220px;
+    height: clamp(120px, 18vw, 160px);
+    flex-shrink: 0;
+    border: 1px solid var(--terminal-dim);
+    background: var(--void);
+    padding: 0.55rem 0.75rem 0.45rem;
+    font-family: var(--font-mono);
+    color: var(--text-dim);
+    position: relative;
+    align-self: flex-start;
+    box-shadow: 0 0 16px rgba(51, 255, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hero-monitor::before {
+    content: "services";
+    position: absolute;
+    top: -8px;
+    left: 0.75rem;
+    background: var(--void);
+    padding: 0 0.45rem;
+    color: var(--terminal);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-shadow: 0 0 5px var(--terminal-dim);
+  }
+  .hero-monitor::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 2px,
+      rgba(0, 0, 0, 0.20) 2px,
+      rgba(0, 0, 0, 0.20) 3px
+    );
+  }
+  .m-rows {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+  .m-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 11px;
+    line-height: 1;
+  }
+  .m-name {
+    color: var(--text);
+    width: 64px;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+  }
+  .m-eq {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 2px;
+    flex: 1;
+    height: 14px;
+  }
+  .m-eq i {
+    display: block;
+    width: 5px;
+    height: 100%;
+    background: var(--terminal-dim);
+    transform-origin: bottom;
+    animation: eqpulse 1.8s ease-in-out infinite;
+  }
+  .m-eq i:nth-child(1) { animation-delay: 0s; }
+  .m-eq i:nth-child(2) { animation-delay: 0.18s; }
+  .m-eq i:nth-child(3) { animation-delay: 0.36s; }
+  .m-eq i:nth-child(4) { animation-delay: 0.54s; }
+  .m-eq i:nth-child(5) { animation-delay: 0.72s; }
+
+  .m-row:nth-child(1) .m-eq i { animation-duration: 1.9s; }
+  .m-row:nth-child(2) .m-eq i { animation-duration: 2.4s; }
+  .m-row:nth-child(3) .m-eq i { animation-duration: 1.5s; }
+  .m-row:nth-child(4) .m-eq i { animation-duration: 1.1s; }
+  .m-row:nth-child(5) .m-eq i { animation-duration: 2.0s; }
+
+  @keyframes eqpulse {
+    0%, 100% { transform: scaleY(0.25); background: var(--terminal-dim); opacity: 0.5; }
+    50%      { transform: scaleY(1);    background: var(--terminal);     opacity: 1;   }
+  }
+
+  .m-stat {
+    color: var(--terminal);
+    width: 38px;
+    font-size: 9.5px;
+    letter-spacing: 0.05em;
+    text-align: right;
+  }
+  .m-stat.dim  { color: var(--text-dim); }
+  .m-stat.work {
+    color: var(--terminal);
+    text-shadow: 0 0 5px var(--terminal-dim);
+    animation: blink 1.1s steps(2) infinite;
+  }
+
+  .m-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.35rem;
+    border-top: 1px solid var(--border);
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+  }
+  .m-foot .m-cursor {
+    display: inline-block;
+    width: 5px;
+    height: 9px;
+    background: var(--terminal);
+    animation: blink 1s steps(2) infinite;
+  }
+
+  @media (max-width: 720px) {
+    .hero-monitor { display: none; }
+  }
 
   /* Sections */
   section { margin-bottom: 4rem; }
@@ -449,7 +588,7 @@
 <div class="wrap">
 
   <header class="top">
-    <div class="brand">&gt; vlad@cealicu</div>
+    <div class="brand">&gt; me@vladcealicu.com</div>
     <nav class="top-nav">
       <a href="#now">NOW</a>
       <a href="#localghost">LOCALGHOST</a>
@@ -463,15 +602,49 @@
   <section class="hero">
     <div class="hero-top">
       <div class="avatar">
-        <img src="/images/vlad.png" alt="Portrait of Vlad Cealicu" width="96" height="96">
+        <img src="/images/vlad.png" alt="Portrait of Vlad Cealicu" width="160" height="160">
       </div>
       <div class="hero-head">
         <div class="prompt-line">&gt; whoami<span class="cursor"></span></div>
         <h1>Vlad Cealicu</h1>
+        <p class="role-line">Founder of <a href="https://www.localghost.ai">LocalGhost.ai</a> <span class="when-inline">· 2026</span></p>
+      </div>
+      <div class="hero-monitor" aria-hidden="true">
+        <div class="m-rows">
+          <div class="m-row">
+            <span class="m-name">nginx</span>
+            <span class="m-eq"><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="m-stat">OK</span>
+          </div>
+          <div class="m-row">
+            <span class="m-name">postgres</span>
+            <span class="m-eq"><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="m-stat">OK</span>
+          </div>
+          <div class="m-row">
+            <span class="m-name">redis</span>
+            <span class="m-eq"><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="m-stat">OK</span>
+          </div>
+          <div class="m-row">
+            <span class="m-name">node</span>
+            <span class="m-eq"><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="m-stat dim">IDLE</span>
+          </div>
+          <div class="m-row">
+            <span class="m-name">worker</span>
+            <span class="m-eq"><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="m-stat work">WORK</span>
+          </div>
+        </div>
+        <div class="m-foot">
+          <span>uptime 138d</span>
+          <span class="m-cursor"></span>
+        </div>
       </div>
     </div>
     <p class="tagline">
-      Founder of <a href="https://localghost.ai">LocalGhost.ai</a>. Previously co-founder and CTO of CryptoCompare / CCData for twelve years, until it sold to CoinDesk in 2024. I build backends that don't usually fall over and write about why most software is built to own you.
+      Founder of <a href="https://www.localghost.ai">LocalGhost.ai</a>. Previously co-founder and CTO of CryptoCompare / CCData for twelve years, until it sold to CoinDesk in 2024. I build backends that don't usually fall over and write about why most software is built to own you.
     </p>
     <p class="hero-meta">
       <span>LOC</span> LONDON / WORLD &nbsp;&middot;&nbsp;
@@ -486,7 +659,7 @@
     <div class="section-label">&gt; SECTION_01</div>
     <h2>What I'm doing now</h2>
     <p>
-      Building <a href="https://localghost.ai">LocalGhost.ai</a>, a local-first, privacy-by-architecture AI platform. Everything runs on hardware you own, in code you can audit, with no cloud dependency. The cypherpunk thesis applied to personal AI, since a model that can't see your data can't sell your data.
+      Building <a href="https://www.localghost.ai">LocalGhost.ai</a>, a local-first, privacy-by-architecture AI platform. Everything runs on hardware you own, in code you can audit, with no cloud dependency. The cypherpunk thesis applied to personal AI, since a model that can't see your data can't sell your data.
     </p>
     <p>
       Writing the <a href="https://www.localghost.ai/hard-truths">Hard Truths</a> series alongside it. Posts on AI sycophancy, the skills pipeline, founder dynamics, and what happens to a civilisation that adds bureaucracy faster than it adds builders.
@@ -511,7 +684,7 @@
         <li>Daemons own the control flow and call local models the way another daemon would call Postgres.</li>
         <li>Encrypted, sharded P2P backup via The Mist, with no central server to seize.</li>
       </ul>
-      <a class="btn" href="https://localghost.ai/manifesto">[ READ THE MANIFESTO ]</a>
+      <a class="btn" href="https://www.localghost.ai/manifesto">[ READ THE MANIFESTO ]</a>
       <a class="btn" href="https://github.com/LocalGhostDao">[ GITHUB ]</a>
       <a class="btn" href="https://www.localghost.ai/hard-truths">[ HARD TRUTHS ]</a>
     </div>
@@ -609,7 +782,7 @@
     <div class="section-label">&gt; SECTION_06</div>
     <h2>Elsewhere</h2>
     <div class="links">
-      <a href="https://localghost.ai">localghost.ai <span>↗</span></a>
+      <a href="https://www.localghost.ai">www.localghost.ai <span>↗</span></a>
       <a href="https://github.com/vcealicu">github / vcealicu <span>↗</span></a>
       <a href="https://github.com/LocalGhostDao">github / LocalGhostDao <span>↗</span></a>
       <a href="https://medium.com/@vcealicu">medium <span>↗</span></a>
