@@ -12,6 +12,7 @@
 <link rel="canonical" href="https://www.vladcealicu.com/">
 
 <!-- Favicons -->
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -88,7 +89,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=optional"></noscript>
 <style>
   :root {
     --void: #111111;
@@ -134,7 +136,7 @@
   a {
     color: var(--terminal);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid rgba(51, 255, 0, 0.3);
     transition: border-color 0.15s;
   }
   a:hover { border-bottom-color: var(--terminal); }
@@ -598,11 +600,18 @@
     </nav>
   </header>
 
+  <main>
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-top">
       <div class="avatar">
-        <img src="/images/vlad.png" alt="Portrait of Vlad Cealicu" width="160" height="160">
+        <picture>
+          <source type="image/webp"
+                  srcset="/images/vlad-200.webp 200w, /images/vlad.webp 400w"
+                  sizes="(max-width: 720px) 120px, 160px">
+          <img src="/images/vlad.png" alt="Portrait of Vlad Cealicu" width="160" height="160" loading="eager">
+        </picture>
       </div>
       <div class="hero-head">
         <div class="prompt-line">&gt; whoami<span class="cursor"></span></div>
@@ -797,6 +806,8 @@
       <a href="https://etherscan.io/address/zerocool.eth">zerocool.eth <span>⛓</span></a>
     </div>
   </section>
+
+  </main>
 
   <footer>
     <div>&copy; <span id="y">2026</span> Vlad Cealicu &middot; static html, no trackers, no cookies.</div>
