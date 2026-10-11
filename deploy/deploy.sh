@@ -81,27 +81,29 @@ done < <(find "$SRC_DIR" -name "*.html" -type f -print0)
 echo "</urlset>" >> "$DEST_DIR/sitemap.xml"
 echo "  [📍] sitemap.xml (${#PAGE_URLS[@]} pages)"
 
-# ── Nginx config (if changed), rolled back if it doesn't pass nginx -t ──
+# ── Nginx config (if changed). No sudo: coder owns the site config and may reload nginx.
+#    The reload parses the config first and refuses a broken one without touching the
+#    running server, so a failed reload means "invalid", and the old file goes back. ──
 if [ -f "$NGINX_SRC" ]; then
     if ! cmp -s "$NGINX_SRC" "$NGINX_DEST" 2>/dev/null; then
         echo ""
         echo "> NGINX CONFIG..."
-        BACKUP="$(mktemp)"
-        sudo cp "$NGINX_DEST" "$BACKUP" 2>/dev/null || true
-        sudo cp "$NGINX_SRC" "$NGINX_DEST"
-        if sudo nginx -t 2>&1 | grep -q "successful"; then
-            sudo systemctl reload nginx
-            echo "  [⚡] nginx deployed & reloaded"
+        if [ ! -w "$NGINX_DEST" ] && [ ! -w "$(dirname "$NGINX_DEST")" ]; then
+            echo "  [!] $NGINX_DEST is not writable by $(whoami), nginx config skipped"
         else
-            sudo nginx -t || true
-            if [ -s "$BACKUP" ]; then
-                sudo cp "$BACKUP" "$NGINX_DEST"
-                echo "  [✗] nginx config invalid, previous config restored, not reloaded"
+            BACKUP="$(mktemp)"
+            cp "$NGINX_DEST" "$BACKUP" 2>/dev/null || true
+            cp "$NGINX_SRC" "$NGINX_DEST"
+            if systemctl --no-ask-password reload nginx; then
+                echo "  [⚡] nginx deployed & reloaded"
+            elif [ -s "$BACKUP" ]; then
+                cp "$BACKUP" "$NGINX_DEST"
+                echo "  [✗] nginx refused the new config, previous config restored (running server untouched)"
             else
-                echo "  [✗] nginx config invalid, not reloaded (no previous config to restore)"
+                echo "  [✗] nginx refused the new config and there was no previous one to restore"
             fi
+            rm -f "$BACKUP"
         fi
-        rm -f "$BACKUP"
     else
         echo ""
         echo "  [—] nginx unchanged"

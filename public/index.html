@@ -1749,8 +1749,8 @@
         if (!(n > 1 && n <= 1000)) n = 20;
         var r = 1 + ((Math.random() * n) | 0);
         var s = 'd' + n + ' rolled ' + r + '.';
-        if (n === 20 && r === 20) s += ' natural 20. ship it on a Friday.';
-        else if (n === 20 && r === 1) s += ' natural 1. the deploy script asks for sudo.';
+        if (n === 20 && r === 20) s += ' natural 20. ship it.';
+        else if (n === 20 && r === 1) s += ' natural 1. it\'s DNS. it\'s always DNS.';
         return s;
       },
       history: function () {
