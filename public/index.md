@@ -54,7 +54,7 @@ Links: [terminal](https://www.anchorterminal.com/), [llms.txt](https://www.ancho
 ## Built before
 
 - **Co-founder and CTO, CryptoCompare / CCData (2014 to 2025).** Built it with Charlie Hayter from a side project into the largest digital asset data and index provider in the industry, about seventy people, Go and Node backend, FCA Benchmark authorisation, ISO and SOC 2. Powered indices for VanEck, MSCI, 21Shares, Coinbase and Pantera, and data feeds behind several spot Bitcoin ETFs. The exchange benchmark iterated from about 2017 and the settled version launched in 2019. Acquired by CoinDesk in October 2024.
-- **Early investor and advisor (ongoing).** Advisory and technical diligence for early-stage founders, including Axo Neurotech and [zakuro.ai](https://zakuro.ai).
+- **Early investor and advisor (ongoing).** Advisory and technical diligence for early-stage founders.
 - **Head of Software Development, LSBF and ADVFN (2009 to 2014).** Financial data, content management, ad systems.
 
 ## Also built (hosted on a home server)
