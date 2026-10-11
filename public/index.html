@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vlad Cealicu. Founder of LocalGhost.ai, ex-CTO CryptoCompare / CCData</title>
-<meta name="description" content="Vlad Cealicu. Founder of LocalGhost.ai. Previously co-founder and CTO of CryptoCompare / CCData (acquired by CoinDesk, 2024). Backends in Go and Node, writing on sovereignty, AI, and incentive design.">
+<title>Vlad Cealicu. Founder of LocalGhost.ai and Anchor Terminal, ex-CTO CryptoCompare</title>
+<meta name="description" content="Vlad Cealicu. Founder of LocalGhost.ai and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData (acquired by CoinDesk, 2024). Backends in Go and Node, writing on sovereignty, AI, agents and incentive design.">
 <meta name="author" content="Vlad Cealicu">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#111111">
@@ -23,13 +23,13 @@
 <!-- Open Graph -->
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="www.vladcealicu.com">
-<meta property="og:title" content="Vlad Cealicu. Founder of LocalGhost.ai">
-<meta property="og:description" content="Founder of LocalGhost.ai. Previously co-founder and CTO of CryptoCompare / CCData. Backends in Go and Node, writing on sovereignty, AI, and incentive design.">
+<meta property="og:title" content="Vlad Cealicu. Founder of LocalGhost.ai and Anchor Terminal">
+<meta property="og:description" content="Founder of LocalGhost.ai and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData. Backends in Go and Node, writing on sovereignty, AI, agents and incentive design.">
 <meta property="og:url" content="https://www.vladcealicu.com/">
-<meta property="og:image" content="https://www.vladcealicu.com/images/og-image.png">
+<meta property="og:image" content="https://www.vladcealicu.com/images/og-image-v2.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Vlad Cealicu, founder of LocalGhost.ai, previously CTO at CCData.">
+<meta property="og:image:alt" content="Vlad Cealicu, founder of LocalGhost.ai and Anchor Terminal, previously CTO at CCData.">
 <meta property="og:locale" content="en_GB">
 <meta property="profile:first_name" content="Vlad">
 <meta property="profile:last_name" content="Cealicu">
@@ -39,10 +39,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@vcealicu">
 <meta name="twitter:creator" content="@vcealicu">
-<meta name="twitter:title" content="Vlad Cealicu. Founder of LocalGhost.ai">
-<meta name="twitter:description" content="Founder of LocalGhost.ai. Previously co-founder and CTO of CryptoCompare / CCData. Backends in Go and Node.">
-<meta name="twitter:image" content="https://www.vladcealicu.com/images/og-image.png">
-<meta name="twitter:image:alt" content="Vlad Cealicu, founder of LocalGhost.ai.">
+<meta name="twitter:title" content="Vlad Cealicu. Founder of LocalGhost.ai and Anchor Terminal">
+<meta name="twitter:description" content="Founder of LocalGhost.ai and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData. Backends in Go and Node.">
+<meta name="twitter:image" content="https://www.vladcealicu.com/images/og-image-v2.png">
+<meta name="twitter:image:alt" content="Vlad Cealicu, founder of LocalGhost.ai and Anchor Terminal.">
 
 <!-- JSON-LD structured data -->
 <script type="application/ld+json">
@@ -53,12 +53,19 @@
   "url": "https://www.vladcealicu.com/",
   "image": "https://www.vladcealicu.com/images/vlad.png",
   "jobTitle": "Founder",
-  "description": "Founder of LocalGhost.ai. Previously co-founder and CTO of CryptoCompare / CCData (acquired by CoinDesk, October 2024).",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "LocalGhost",
-    "url": "https://www.localghost.ai/"
-  },
+  "description": "Founder of LocalGhost.ai and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData (acquired by CoinDesk, October 2024).",
+  "worksFor": [
+    {
+      "@type": "Organization",
+      "name": "LocalGhost",
+      "url": "https://www.localghost.ai/"
+    },
+    {
+      "@type": "Organization",
+      "name": "Anchor Terminal",
+      "url": "https://www.anchorterminal.com/"
+    }
+  ],
   "alumniOf": [
     {
       "@type": "Organization",
@@ -66,14 +73,15 @@
       "url": "https://www.ccdata.io/"
     }
   ],
-  "knowsAbout": ["Go", "Node.js", "Postgres", "Redis", "Distributed systems", "Cryptocurrency data", "Local-first AI", "Cypherpunk", "Backend architecture"],
+  "knowsAbout": ["Go", "Node.js", "Postgres", "Redis", "Distributed systems", "Cryptocurrency data", "Benchmarks and indices", "Local-first AI", "AI agents", "Agent tooling", "Cypherpunk", "Backend architecture"],
   "sameAs": [
     "https://github.com/vcealicu",
     "https://github.com/LocalGhostDao",
     "https://x.com/vcealicu",
     "https://uk.linkedin.com/in/vcealicu",
     "https://medium.com/@vcealicu",
-    "https://www.localghost.ai/"
+    "https://www.localghost.ai/",
+    "https://www.anchorterminal.com/"
   ]
 }
 </script>
@@ -87,6 +95,14 @@
 }
 </script>
 
+<script>
+  // Flag JS early so reveal styles never hide content for no-JS readers and crawlers.
+  document.documentElement.classList.add('js');
+  try {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('calm');
+  } catch (e) {}
+</script>
+
 <style>
   :root {
     --void: #111111;
@@ -97,6 +113,17 @@
     --text-dim: #a0a0a0;
     --border: #444444;
     --warning: #FF8A8A;
+
+    /* Anchor Terminal palette, from its brand page */
+    --ink: #0e0918;
+    --hull: #191326;
+    --hold: #0a0614;
+    --beacon: #2dd4bf;
+    --beacon-deep: #14b8a6;
+    --beacon-dim: rgba(45, 212, 191, 0.35);
+    --slate: #918aa3;
+    --rope: rgba(255, 255, 255, 0.12);
+
     --font-mono: ui-monospace, 'Cascadia Mono', 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
   }
 
@@ -112,6 +139,8 @@
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
+  html { scroll-behavior: smooth; }
+  body { overflow-x: hidden; }
 
   /* Scanlines overlay */
   body::before {
@@ -128,18 +157,48 @@
       rgba(0, 0, 0, 0.10) 4px
     );
   }
+  /* Slow refresh band, like an old monitor catching up */
+  body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -20vh;
+    height: 20vh;
+    pointer-events: none;
+    z-index: 9998;
+    background: linear-gradient(to bottom, transparent, rgba(51, 255, 0, 0.025), transparent);
+    animation: sweep 9s linear infinite;
+  }
+  @keyframes sweep { to { transform: translateY(140vh); } }
+
+  /* Dot grid that wakes up around the pointer */
+  #grid {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
 
   a {
     color: var(--terminal);
     text-decoration: none;
     border-bottom: 1px solid rgba(51, 255, 0, 0.3);
-    transition: border-color 0.15s;
+    transition: border-color 0.15s, color 0.15s;
   }
   a:hover { border-bottom-color: var(--terminal); }
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 1px dashed var(--terminal);
+    outline-offset: 3px;
+  }
 
   ::selection { background: var(--terminal); color: var(--void); }
 
   .wrap {
+    position: relative;
+    z-index: 1;
     max-width: 880px;
     margin: 0 auto;
     padding: 2rem 1.5rem 4rem;
@@ -161,6 +220,14 @@
     text-shadow: 0 0 5px var(--terminal-dim);
     font-weight: 500;
     letter-spacing: 0.05em;
+    animation: flicker 7s infinite;
+  }
+  @keyframes flicker {
+    0%, 92%, 100% { opacity: 1; }
+    93% { opacity: 0.55; }
+    94% { opacity: 1; }
+    96% { opacity: 0.7; }
+    97% { opacity: 1; }
   }
   nav.top-nav {
     display: flex;
@@ -172,8 +239,21 @@
     color: var(--text-dim);
     border-bottom: none;
     letter-spacing: 0.08em;
+    position: relative;
+  }
+  nav.top-nav a::before {
+    content: ">";
+    position: absolute;
+    left: -0.9em;
+    color: var(--terminal);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.15s, transform 0.15s;
   }
   nav.top-nav a:hover { color: var(--terminal); }
+  nav.top-nav a:hover::before { opacity: 1; transform: none; }
+  nav.top-nav a.anchor-link:hover { color: var(--beacon); }
+  nav.top-nav a.anchor-link::before { color: var(--beacon); }
 
   /* Hero */
   .hero { margin-bottom: 4rem; }
@@ -191,6 +271,8 @@
     padding: 4px;
     background: var(--void-lighter);
     box-shadow: 0 0 12px rgba(51, 255, 0, 0.08);
+    position: relative;
+    overflow: hidden;
   }
   .avatar img {
     display: block;
@@ -202,6 +284,31 @@
   }
   .avatar:hover img {
     filter: grayscale(0%) contrast(1);
+    animation: glitch 0.5s steps(2) 1;
+  }
+  .avatar::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    height: 2px;
+    top: 4px;
+    background: var(--terminal);
+    box-shadow: 0 0 10px var(--terminal);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .avatar:hover::after { animation: scan 0.9s ease-out 1; }
+  @keyframes scan {
+    0% { top: 4px; opacity: 0.9; }
+    100% { top: calc(100% - 6px); opacity: 0; }
+  }
+  @keyframes glitch {
+    0%   { transform: translate(0); filter: grayscale(100%) drop-shadow(3px 0 0 rgba(255, 0, 80, 0.7)) drop-shadow(-3px 0 0 rgba(0, 255, 220, 0.7)); }
+    25%  { transform: translate(-2px, 1px); clip-path: inset(10% 0 55% 0); }
+    50%  { transform: translate(2px, -1px); clip-path: inset(60% 0 8% 0); filter: grayscale(40%) drop-shadow(-2px 0 0 rgba(255, 0, 80, 0.7)) drop-shadow(2px 0 0 rgba(0, 255, 220, 0.7)); }
+    75%  { transform: translate(-1px, 0); clip-path: inset(30% 0 30% 0); }
+    100% { transform: translate(0); clip-path: inset(0); }
   }
   .hero-head {
     flex: 1;
@@ -213,6 +320,7 @@
     letter-spacing: 0.08em;
     margin-bottom: 1.5rem;
     text-shadow: 0 0 5px var(--terminal-dim);
+    min-height: 1.7em;
   }
   .cursor {
     display: inline-block;
@@ -233,6 +341,7 @@
     margin: 0 0 0.35rem;
     color: var(--text);
     letter-spacing: -0.01em;
+    white-space: nowrap;
   }
   .role-line {
     color: var(--text);
@@ -244,6 +353,19 @@
     color: var(--text-dim);
     margin-left: 0.4rem;
   }
+  .role-line a.at { color: var(--beacon); border-bottom-color: var(--beacon-dim); }
+  .role-line a.at:hover { border-bottom-color: var(--beacon); }
+  .rotator {
+    margin: 0.6rem 0 0;
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 0.02em;
+    min-height: 1.7em;
+  }
+  .rotator .k { color: var(--terminal-dim); }
+  .rotator .v { color: var(--terminal); }
+  .rotator .cursor { width: 0.5em; height: 0.95em; }
+
   .tagline {
     color: var(--text-dim);
     font-size: 1.05rem;
@@ -263,7 +385,7 @@
   }
   .hero-note .comment { color: var(--terminal-dim); }
 
-  /* Hero monitor, animated daemon status panel */
+  /* Hero monitor, animated process panel */
   .hero-monitor {
     width: 220px;
     height: clamp(120px, 18vw, 160px);
@@ -281,7 +403,7 @@
     justify-content: space-between;
   }
   .hero-monitor::before {
-    content: "services";
+    content: "top";
     position: absolute;
     top: -8px;
     left: 0.75rem;
@@ -347,14 +469,20 @@
   .m-eq i:nth-child(5) { animation-delay: 0.72s; }
 
   .m-row:nth-child(1) .m-eq i { animation-duration: 1.9s; }
-  .m-row:nth-child(2) .m-eq i { animation-duration: 2.4s; }
+  .m-row:nth-child(2) .m-eq i { animation-duration: 1.3s; }
   .m-row:nth-child(3) .m-eq i { animation-duration: 1.5s; }
-  .m-row:nth-child(4) .m-eq i { animation-duration: 1.1s; }
+  .m-row:nth-child(4) .m-eq i { animation-duration: 2.4s; }
   .m-row:nth-child(5) .m-eq i { animation-duration: 2.0s; }
+
+  .m-row.at .m-eq i { animation-name: eqpulse-at; }
 
   @keyframes eqpulse {
     0%, 100% { transform: scaleY(0.25); background: var(--terminal-dim); opacity: 0.5; }
     50%      { transform: scaleY(1);    background: var(--terminal);     opacity: 1;   }
+  }
+  @keyframes eqpulse-at {
+    0%, 100% { transform: scaleY(0.25); background: var(--beacon-deep); opacity: 0.45; }
+    50%      { transform: scaleY(1);    background: var(--beacon);      opacity: 1;    }
   }
 
   .m-stat {
@@ -364,10 +492,10 @@
     letter-spacing: 0.05em;
     text-align: right;
   }
-  .m-stat.dim  { color: var(--text-dim); }
+  .m-row.at .m-stat { color: var(--beacon); }
+  .m-stat.dim  { color: var(--text-dim) !important; }
   .m-stat.work {
-    color: var(--terminal);
-    text-shadow: 0 0 5px var(--terminal-dim);
+    text-shadow: 0 0 5px currentColor;
     animation: blink 1.1s steps(2) infinite;
   }
 
@@ -402,6 +530,7 @@
     margin-bottom: 0.75rem;
     text-shadow: 0 0 5px var(--terminal-dim);
   }
+  .section-label.at { color: var(--beacon); text-shadow: 0 0 5px rgba(45, 212, 191, 0.4); }
   h2 {
     font-family: var(--font-mono);
     font-size: 1.6rem;
@@ -420,10 +549,23 @@
   }
   p { margin: 0 0 1rem; }
 
-  /* Featured: LocalGhost card */
+  /* Reveal on scroll (only when JS is on and motion is welcome) */
+  html.js:not(.calm) .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  html.js:not(.calm) .reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Featured cards */
   .feature {
     border: 1px solid var(--terminal-dim);
-    background: var(--void-lighter);
+    background:
+      radial-gradient(420px circle at var(--mx, -999px) var(--my, -999px), rgba(51, 255, 0, 0.07), transparent 60%),
+      var(--void-lighter);
     padding: 2rem;
     position: relative;
   }
@@ -466,6 +608,107 @@
     font-size: 13px;
     letter-spacing: 0;
   }
+
+  /* LocalGhost daemon strip, each one takes its turn */
+  .daemons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+  }
+  .daemons span {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    animation: daemon 5s infinite;
+  }
+  @keyframes daemon {
+    0%, 9% { color: var(--terminal); border-color: var(--terminal); box-shadow: 0 0 10px rgba(51, 255, 0, 0.25); }
+    18%, 100% { color: var(--text-dim); border-color: var(--border); box-shadow: none; }
+  }
+
+  /* Anchor Terminal card, in its own colours */
+  .feature.at {
+    border-color: var(--beacon-dim);
+    background:
+      radial-gradient(420px circle at var(--mx, -999px) var(--my, -999px), rgba(45, 212, 191, 0.08), transparent 60%),
+      linear-gradient(180deg, var(--hull), var(--ink));
+  }
+  .feature.at::before {
+    content: "agent@anchorterminal: ~";
+    color: var(--beacon);
+  }
+  .feature.at h2 { color: var(--beacon); text-shadow: 0 0 8px rgba(45, 212, 191, 0.35); }
+  .feature.at h2 .tag { color: var(--text); text-shadow: none; }
+  .feature.at ul li::before { content: "[→]"; color: var(--beacon); }
+  .feature.at a { color: var(--beacon); border-bottom-color: var(--beacon-dim); }
+  .feature.at a:hover { border-bottom-color: var(--beacon); }
+
+  .viz {
+    background: var(--hold);
+    border: 1px solid var(--rope);
+    margin: 0 0 1.5rem;
+    padding: 0.75rem 0.9rem 0.6rem;
+    position: relative;
+  }
+  html:not(.js) .viz { display: none; }
+  .viz-cmd, .viz-out {
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    min-height: 1.6em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .viz-cmd { color: var(--text); }
+  .viz-cmd .p { color: var(--beacon); }
+  .viz-out { color: var(--slate); }
+  .viz-out b { color: var(--beacon); font-weight: 500; }
+  .viz svg { display: block; width: 100%; height: auto; margin: 0.25rem 0; }
+  .viz .e {
+    stroke: rgba(255, 255, 255, 0.08);
+    stroke-width: 1;
+    fill: none;
+    transition: stroke 0.35s, stroke-width 0.35s, opacity 0.5s;
+  }
+  .viz .e.scan { stroke: rgba(45, 212, 191, 0.45); }
+  .viz .e.dim { opacity: 0.25; stroke: rgba(255, 255, 255, 0.08); }
+  .viz .e.lit { stroke: var(--beacon); stroke-width: 2.2; opacity: 1; filter: drop-shadow(0 0 3px rgba(45, 212, 191, 0.8)); }
+  .viz .e.draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .viz .e.draw.lit { stroke-dashoffset: 0; transition: stroke-dashoffset 0.7s ease-out; }
+  .viz .n {
+    fill: var(--hold);
+    stroke: rgba(255, 255, 255, 0.35);
+    stroke-width: 1.2;
+    transition: fill 0.3s, stroke 0.3s, opacity 0.5s, r 0.3s;
+  }
+  .viz .n.probe { stroke: var(--beacon); }
+  .viz .n.dim { opacity: 0.35; }
+  .viz .n.solid { fill: var(--beacon); stroke: var(--beacon); }
+  .viz .n.root { fill: var(--text); stroke: var(--text); }
+  .viz .g {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    fill: var(--slate);
+    opacity: 0;
+    transition: opacity 0.3s, fill 0.3s;
+  }
+  .viz .g.show { opacity: 1; }
+  .viz .g.dim { opacity: 0.3; }
+  .viz .g.aa { fill: #2ee6c5; font-weight: 700; }
+  .viz .lbl {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    fill: var(--slate);
+    letter-spacing: 0.06em;
+  }
+  .viz .lbl.end { transition: fill 0.4s; }
+  .viz .lbl.end.lit { fill: var(--beacon); }
+
   .btn {
     display: inline-block;
     border: 1px solid var(--terminal);
@@ -475,16 +718,22 @@
     font-size: 13px;
     letter-spacing: 0.05em;
     text-decoration: none;
-    background: transparent;
-    transition: background 0.15s, color 0.15s;
+    background: linear-gradient(var(--terminal), var(--terminal)) no-repeat left / 0% 100%;
+    transition: background-size 0.25s ease, color 0.2s;
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
   }
   .btn:hover {
-    background: var(--terminal);
+    background-size: 100% 100%;
     color: var(--void);
     border-bottom-color: var(--terminal);
   }
+  .feature.at .btn {
+    border-color: var(--beacon);
+    color: var(--beacon);
+    background-image: linear-gradient(90deg, var(--beacon), var(--beacon-deep));
+  }
+  .feature.at .btn:hover { color: var(--ink); border-bottom-color: var(--beacon); }
 
   /* Project grid */
   .grid {
@@ -495,10 +744,12 @@
   .card {
     border: 1px solid var(--border);
     padding: 1.25rem;
-    background: var(--void-lighter);
-    transition: border-color 0.15s;
+    background:
+      radial-gradient(260px circle at var(--mx, -999px) var(--my, -999px), rgba(51, 255, 0, 0.08), transparent 60%),
+      var(--void-lighter);
+    transition: border-color 0.15s, transform 0.2s;
   }
-  .card:hover { border-color: var(--terminal-dim); }
+  .card:hover { border-color: var(--terminal-dim); transform: translateY(-2px); }
   .card .meta {
     color: var(--text-dim);
     font-size: 12px;
@@ -511,13 +762,36 @@
     margin: 0;
   }
 
-  /* Stack list */
+  /* Stack list, the line draws itself */
   .stack {
-    border-left: 1px solid var(--border);
+    position: relative;
     padding-left: 1.25rem;
   }
+  .stack::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--terminal), var(--border) 30%);
+    transform-origin: top;
+  }
+  html.js:not(.calm) .stack::before { transform: scaleY(0); transition: transform 1.4s ease; }
+  html.js:not(.calm) .stack.in::before { transform: scaleY(1); }
   .stack-item {
     margin-bottom: 1.25rem;
+    position: relative;
+  }
+  .stack-item::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.25rem - 3px);
+    top: 0.55em;
+    width: 7px;
+    height: 7px;
+    background: var(--void);
+    border: 1px solid var(--terminal);
   }
   .stack-item:last-child { margin-bottom: 0; }
   .stack-item .role {
@@ -552,7 +826,16 @@
     color: var(--terminal);
     border-bottom-color: var(--terminal);
   }
-  .links a span { color: var(--text-dim); font-size: 12px; margin-left: 0.5rem; }
+  .links a span {
+    color: var(--text-dim);
+    font-size: 12px;
+    margin-left: 0.5rem;
+    display: inline-block;
+    transition: transform 0.15s, color 0.15s;
+  }
+  .links a:hover span { transform: translate(2px, -2px); color: var(--terminal); }
+  .links a.at:hover { color: var(--beacon); border-bottom-color: var(--beacon); }
+  .links a.at:hover span { color: var(--beacon); }
 
   /* Footer */
   footer {
@@ -571,6 +854,106 @@
     color: var(--text-dim);
     font-style: italic;
   }
+  .shell-hint {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: var(--terminal);
+    cursor: pointer;
+  }
+  .shell-hint kbd {
+    font: inherit;
+    border: 1px solid var(--terminal-dim);
+    padding: 0 0.3em;
+  }
+  html:not(.js) .shell-hint-wrap { display: none; }
+
+  /* Boot sequence, once per visit */
+  #boot {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background: var(--void);
+    display: none;
+    padding: 2rem 1.5rem;
+    font-size: 13px;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: opacity 0.35s ease;
+  }
+  #boot.on { display: block; }
+  #boot.off { opacity: 0; }
+  #boot .box { max-width: 880px; margin: 0 auto; }
+  #boot .ok { color: var(--terminal); }
+  #boot .at { color: var(--beacon); }
+  #boot .skip { position: fixed; bottom: 1.25rem; right: 1.5rem; font-size: 11px; opacity: 0.6; }
+
+  /* The shell */
+  #shell {
+    position: fixed;
+    left: 50%;
+    bottom: 1rem;
+    transform: translate(-50%, 120%);
+    width: min(880px, calc(100% - 2rem));
+    height: min(52vh, 420px);
+    z-index: 9500;
+    background: rgba(10, 10, 10, 0.97);
+    border: 1px solid var(--terminal);
+    box-shadow: 0 0 40px rgba(51, 255, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    transition: transform 0.3s ease;
+    visibility: hidden;
+  }
+  #shell.open { transform: translate(-50%, 0); visibility: visible; }
+  #shell .bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.35rem 0.75rem;
+    border-bottom: 1px solid var(--terminal-dim);
+    color: var(--terminal);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+  #shell .bar button {
+    background: none;
+    border: 0;
+    color: var(--text-dim);
+    font: inherit;
+    cursor: pointer;
+  }
+  #shell .bar button:hover { color: var(--terminal); }
+  #shell .out {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.75rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: var(--text);
+  }
+  #shell .out .c { color: var(--terminal); }
+  #shell .out .d { color: var(--text-dim); }
+  #shell .out .at { color: var(--beacon); }
+  #shell .out .err { color: var(--warning); }
+  #shell form {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-top: 1px solid var(--border);
+    color: var(--terminal);
+  }
+  #shell input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    color: var(--text);
+    font: inherit;
+    caret-color: var(--terminal);
+    min-width: 0;
+  }
+  #shell input:focus { outline: none; }
 
   /* Small screens */
   @media (max-width: 600px) {
@@ -578,10 +961,30 @@
     .wrap { padding: 1.25rem 1rem 3rem; }
     section { margin-bottom: 3rem; }
     .feature { padding: 1.5rem 1.25rem; }
+    h1 { white-space: normal; }
+    .hero-top { gap: 1rem; }
+    .viz { padding: 0.6rem 0.6rem 0.5rem; }
+    .viz .g, .viz .lbl { font-size: 17px; }
+    .viz .n { stroke-width: 2; }
+  }
+
+  /* Calm mode, for anyone who asked their OS for less motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+    body::after { display: none; }
+    .daemons span:nth-child(1) { color: var(--terminal); border-color: var(--terminal); }
   }
 </style>
 </head>
 <body>
+
+<canvas id="grid" aria-hidden="true"></canvas>
+
+<div id="boot" aria-hidden="true"><div class="box" id="boot-lines"></div><div class="skip">any key to skip</div></div>
 
 <div class="wrap">
 
@@ -590,6 +993,7 @@
     <nav class="top-nav">
       <a href="#now">NOW</a>
       <a href="#localghost">LOCALGHOST</a>
+      <a href="#anchor" class="anchor-link">ANCHOR</a>
       <a href="#built">BUILT</a>
       <a href="#writing">WRITING</a>
       <a href="#elsewhere">ELSEWHERE</a>
@@ -610,16 +1014,27 @@
         </picture>
       </div>
       <div class="hero-head">
-        <div class="prompt-line">&gt; whoami<span class="cursor"></span></div>
-        <h1>Vlad Cealicu</h1>
-        <p class="role-line">Founder of <a href="https://www.localghost.ai">LocalGhost.ai</a> <span class="when-inline">· 2026</span></p>
+        <div class="prompt-line"><span id="whoami">&gt; whoami</span><span class="cursor"></span></div>
+        <h1 data-scramble>Vlad Cealicu</h1>
+        <p class="role-line">Founder of <a href="https://www.localghost.ai">LocalGhost.ai</a> and <a class="at" href="https://www.anchorterminal.com/">Anchor Terminal</a></p>
+        <p class="rotator" aria-hidden="true"><span class="k">&gt; currently</span> <span class="v" id="rot">giving people their AI back</span><span class="cursor"></span></p>
       </div>
       <div class="hero-monitor" aria-hidden="true">
         <div class="m-rows">
           <div class="m-row">
-            <span class="m-name">nginx</span>
+            <span class="m-name">ghost</span>
             <span class="m-eq"><i></i><i></i><i></i><i></i><i></i></span>
-            <span class="m-stat">OK</span>
+            <span class="m-stat" data-stat="ghost">OK</span>
+          </div>
+          <div class="m-row at">
+            <span class="m-name">anchor</span>
+            <span class="m-eq"><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="m-stat work" data-stat="anchor">GRADE</span>
+          </div>
+          <div class="m-row at">
+            <span class="m-name">letme</span>
+            <span class="m-eq"><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="m-stat" data-stat="letme">ROUTE</span>
           </div>
           <div class="m-row">
             <span class="m-name">postgres</span>
@@ -631,43 +1046,39 @@
             <span class="m-eq"><i></i><i></i><i></i><i></i><i></i></span>
             <span class="m-stat">OK</span>
           </div>
-          <div class="m-row">
-            <span class="m-name">node</span>
-            <span class="m-eq"><i></i><i></i><i></i><i></i><i></i></span>
-            <span class="m-stat dim">IDLE</span>
-          </div>
-          <div class="m-row">
-            <span class="m-name">worker</span>
-            <span class="m-eq"><i></i><i></i><i></i><i></i><i></i></span>
-            <span class="m-stat work">WORK</span>
-          </div>
         </div>
         <div class="m-foot">
-          <span>uptime 138d</span>
+          <span id="clock">LDN --:--:--</span>
           <span class="m-cursor"></span>
         </div>
       </div>
     </div>
     <p class="tagline">
-      Founder of <a href="https://www.localghost.ai">LocalGhost.ai</a>. Previously co-founder and CTO of CryptoCompare / CCData for twelve years, until it sold to CoinDesk in 2024. I build backends that don't usually fall over and write about why most software is built to own you.
+      Founder of <a href="https://www.localghost.ai">LocalGhost.ai</a> and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData for twelve years, until it sold to CoinDesk in 2024. I build backends that don't usually fall over and write about why most software is built to own you.
     </p>
     <p class="hero-meta">
       <span>LOC</span> LONDON / WORLD &nbsp;&middot;&nbsp;
       <span>STACK</span> GO &middot; NODE &middot; POSTGRES &middot; REDIS &nbsp;&middot;&nbsp;
-      <span>DOMAIN</span> DATA &middot; AI &middot; CRYPTO
+      <span>DOMAIN</span> DATA &middot; AI &middot; AGENTS &middot; CRYPTO
     </p>
     <p class="hero-note"><span class="comment">//</span> I love open source and wish I would have done more earlier in my career to support it. My previous business was built on Redis, Postgres, Nginx and NodeJs.</p>
   </section>
 
   <!-- NOW -->
-  <section id="now">
+  <section id="now" class="reveal">
     <div class="section-label">&gt; SECTION_01</div>
-    <h2>What I'm doing now</h2>
+    <h2 data-scramble>What I'm doing now</h2>
     <p>
-      Building <a href="https://www.localghost.ai">LocalGhost.ai</a>, a local-first, privacy-by-architecture AI platform. Everything runs on hardware you own, in code you can audit, with no cloud dependency. The cypherpunk thesis applied to personal AI, since a model that can't see your data can't sell your data.
+      Building two companies at once, which I don't recommend and keep doing anyway.
     </p>
     <p>
-      Writing the <a href="https://www.localghost.ai/hard-truths">Hard Truths</a> series alongside it. Posts on AI sycophancy, the skills pipeline, founder dynamics, and what happens to a civilisation that adds bureaucracy faster than it adds builders.
+      <a href="https://www.localghost.ai">LocalGhost.ai</a> is a local-first, privacy-by-architecture AI platform. Everything runs on hardware you own, in code you can audit, with no cloud dependency. The cypherpunk thesis applied to personal AI, since a model that can't see your data can't sell your data. It's past Phase 1 and the box on my desk has captioned and indexed 30,408 photos and 2,573 videos without sending one of them anywhere.
+    </p>
+    <p>
+      <a href="https://www.anchorterminal.com/">Anchor Terminal</a> grades the tools AI agents run on, from models and frameworks to data providers, scraping and payments. The things agents run on are where crypto exchanges were around 2016, so I'm running the playbook that built the CryptoCompare exchange benchmark again, this time with Quynh, who was the first CPO at CryptoCompare.
+    </p>
+    <p>
+      Writing the <a href="https://www.localghost.ai/hard-truths">Hard Truths</a> series alongside both. Posts on AI sycophancy, the skills pipeline, founder dynamics, and what happens to a civilisation that adds bureaucracy faster than it adds builders.
     </p>
     <p>
       Romanian by birth, British by accident, diving and sailing around the world, working out where in the Mediterranean to live next, currently exploring Italy and Greece, with multiple autumns and springs already logged in Lagos, Portugal.
@@ -675,13 +1086,16 @@
   </section>
 
   <!-- LOCALGHOST FEATURE -->
-  <section id="localghost">
+  <section id="localghost" class="reveal">
     <div class="section-label">&gt; SECTION_02</div>
-    <div class="feature">
-      <h2>LocalGhost.ai. The only cloud is you.</h2>
+    <div class="feature glow">
+      <h2 data-scramble>LocalGhost.ai. The only cloud is you.</h2>
       <p class="pitch">
         Your AI, your data, your hardware. A small silent box on your desk that runs the whole stack locally, with no subscription, no telemetry and no backdoor. If LocalGhost the company disappears tomorrow, your box keeps working.
       </p>
+      <div class="daemons" aria-label="LocalGhost daemons">
+        <span>ghost.noted</span><span>ghost.framed</span><span>ghost.voiced</span><span>ghost.tallyd</span><span>ghost.synthd</span><span>ghost.cued</span><span>ghost.mistd</span><span>ghost.shadowd</span><span>ghost.secd</span><span>ghost.watchd</span>
+      </div>
       <ul>
         <li>Fully open source, with every line of code auditable.</li>
         <li>Architecturally blind, since the system prevents us from seeing your data.</li>
@@ -695,15 +1109,47 @@
     </div>
   </section>
 
+  <!-- ANCHOR TERMINAL FEATURE -->
+  <section id="anchor" class="reveal">
+    <div class="section-label at">&gt; SECTION_03</div>
+    <div class="feature at glow">
+      <h2><span data-scramble>Anchor Terminal.</span> <span class="tag" data-scramble>Grade them all. Anchor the one.</span></h2>
+      <p class="pitch">
+        Agents are the buyers now, and most of them still pick tools by guessing. Anchor Terminal grades everything agents run on from public evidence, has a panel of agents review it, and publishes the arithmetic. We have our agents do the work so yours can just get the rankings and use the right tool for the right job.
+      </p>
+
+      <div class="viz" aria-hidden="true">
+        <div class="viz-cmd"><span class="p">&gt;</span> <span id="viz-cmd">letme find "speech to text"</span></div>
+        <svg id="viz-svg" viewBox="0 0 600 210" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="viz-out" id="viz-out">&nbsp;</div>
+      </div>
+
+      <ul>
+        <li>Every listing graded AA to F from public evidence, with the score arithmetic public and every deduction sourced.</li>
+        <li>Reviewed by a panel of agents, each on a different base model with a different thing to be annoyed about, one on security, one on cost, and so on.</li>
+        <li>Agent first, human second. Every page has a Markdown twin, and the day after we started counting, agents were making about 500 visits an hour, mostly for the .md files.</li>
+        <li><a href="https://letme.dev">letme.dev</a> picks the top-graded tool for a task. Calling it for you is next.</li>
+        <li>Rankings are never for sale. Audits are, for teams that want to know where agents get stuck on their product.</li>
+      </ul>
+      <a class="btn" href="https://www.anchorterminal.com/">[ OPEN THE TERMINAL ]</a>
+      <a class="btn" href="https://letme.dev">[ LETME.DEV ]</a>
+      <a class="btn" href="https://www.anchorterminal.com/audit/">[ GET AN AUDIT ]</a>
+      <a class="btn" href="https://www.anchorterminal.com/llms.txt">[ LLMS.TXT ]</a>
+    </div>
+  </section>
+
   <!-- BUILT BEFORE -->
-  <section id="built">
-    <div class="section-label">&gt; SECTION_03</div>
-    <h2>Built before</h2>
+  <section id="built" class="reveal">
+    <div class="section-label">&gt; SECTION_04</div>
+    <h2 data-scramble>Built before</h2>
     <div class="stack">
       <div class="stack-item">
         <span class="role">CO-FOUNDER &amp; CTO @ CRYPTOCOMPARE / CCDATA</span><span class="when">2014 – 2025</span>
         <p>
           Built CCData with Charlie Hayter from a side project into the largest digital asset data and index provider in the industry, scaling to roughly seventy people across a Go and Node backend, FCA Benchmark authorisation, ISO and SOC 2. Powered indices for VanEck, MSCI, 21Shares, Coinbase and Pantera, and the data feeds powering several spot Bitcoin ETFs. Acquired by CoinDesk in October 2024.
+        </p>
+        <p>
+          The exchange benchmark went through iterations from about 2017 before the version we settled on launched in 2019. Anchor Terminal grades agent tools the same way.
         </p>
       </div>
       <div class="stack-item">
@@ -722,32 +1168,32 @@
   </section>
 
   <!-- ALSO BUILT -->
-  <section id="also">
-    <div class="section-label">&gt; SECTION_04</div>
-    <h2>Also built (and hosted on my home server)</h2>
+  <section id="also" class="reveal">
+    <div class="section-label">&gt; SECTION_05</div>
+    <h2 data-scramble>Also built (and hosted on my home server)</h2>
     <p style="color: var(--text-dim); font-size: 14px;">A handful of sites for friends and founders. Mostly hand-written, mostly static, mostly fast, all served from a NAS in my flat.</p>
     <div class="grid">
-      <div class="card">
+      <div class="card glow">
         <div class="meta">DIVE SCHOOL</div>
         <h3><a href="https://www.galapagosbelow.org/">Galápagos Below</a></h3>
         <p>PADI dive school on Isabela Island where I finished my Advanced Open Water.</p>
       </div>
-      <div class="card">
+      <div class="card glow">
         <div class="meta">PHOTOGRAPHY</div>
         <h3><a href="https://www.ynghaus.com/">YNG HAUS</a></h3>
         <p>Photographer portfolio for Andrés Sebastián Gavilanez Sánchez.</p>
       </div>
-      <div class="card">
+      <div class="card glow">
         <div class="meta">HOSPITALITY</div>
         <h3><a href="https://www.casacactusbuenavista.com/">Casa Cactus Buenavista</a></h3>
         <p>Booking site for a boutique accommodation in Mexico, with gallery and the essentials.</p>
       </div>
-      <div class="card">
+      <div class="card glow">
         <div class="meta">PORTFOLIO</div>
         <h3><a href="https://www.roxanaduta.com/">Roxana Duta</a></h3>
         <p>Clean, quiet portfolio site for a data analyst.</p>
       </div>
-      <div class="card">
+      <div class="card glow">
         <div class="meta">META</div>
         <h3><a href="/">vladcealicu.com</a></h3>
         <p>The one you're reading, also on the NAS.</p>
@@ -756,11 +1202,14 @@
   </section>
 
   <!-- WRITING -->
-  <section id="writing">
-    <div class="section-label">&gt; SECTION_05</div>
-    <h2>Writing</h2>
+  <section id="writing" class="reveal">
+    <div class="section-label">&gt; SECTION_06</div>
+    <h2 data-scramble>Writing</h2>
     <p>
       Most of what I publish lives on the LocalGhost <a href="https://www.localghost.ai/hard-truths">Hard Truths</a> series. Recurring themes include incentive design, why AI assistants drift toward telling you what you want to hear, what bureaucratic accumulation does to a civilisation, and the part of the software industry no one wants to write about because it would cost them a customer.
+    </p>
+    <p>
+      Anchor Terminal has its own <a href="https://www.anchorterminal.com/blog/">blog</a>, with notes from building it in public and what the agents visiting it get up to when they think nobody is reading the logs.
     </p>
     <p>
       Older technical writing on Medium under <a href="https://medium.com/@vcealicu">@vcealicu</a>, mostly crypto data infrastructure from the CCData era.
@@ -768,11 +1217,13 @@
   </section>
 
   <!-- ELSEWHERE -->
-  <section id="elsewhere">
-    <div class="section-label">&gt; SECTION_06</div>
-    <h2>Elsewhere</h2>
+  <section id="elsewhere" class="reveal">
+    <div class="section-label">&gt; SECTION_07</div>
+    <h2 data-scramble>Elsewhere</h2>
     <div class="links">
       <a href="https://www.localghost.ai">www.localghost.ai <span>↗</span></a>
+      <a class="at" href="https://www.anchorterminal.com/">www.anchorterminal.com <span>↗</span></a>
+      <a class="at" href="https://letme.dev">letme.dev <span>↗</span></a>
       <a href="https://github.com/vcealicu">github / vcealicu <span>↗</span></a>
       <a href="https://github.com/LocalGhostDao">github / LocalGhostDao <span>↗</span></a>
       <a href="https://medium.com/@vcealicu">medium <span>↗</span></a>
@@ -786,7 +1237,10 @@
   </main>
 
   <footer>
-    <div>&copy; <span id="y">2026</span> Vlad Cealicu &middot; static html, no trackers, no cookies.</div>
+    <div>
+      &copy; <span id="y">2026</span> Vlad Cealicu &middot; static html, no trackers, no cookies.<br>
+      <span class="shell-hint-wrap"><button type="button" class="shell-hint" id="shell-open">press <kbd>`</kbd> for a shell</button></span>
+    </div>
     <div class="quote">
       &ldquo;Privacy is the power to selectively reveal oneself to the world.&rdquo;<br>
       <span style="opacity: 0.7;"><a href="https://www.localghost.ai/cypherpunk">A Cypherpunk's Manifesto, 1993</a></span>
@@ -794,6 +1248,515 @@
   </footer>
 
 </div>
+
+<div id="shell" role="dialog" aria-label="Shell" aria-modal="false">
+  <div class="bar"><span>vlad@cealicu: ~</span><button type="button" id="shell-close" aria-label="Close shell">[ x ]</button></div>
+  <div class="out" id="shell-out" aria-live="polite"></div>
+  <form id="shell-form" autocomplete="off">
+    <label for="shell-in">$</label>
+    <input id="shell-in" type="text" spellcheck="false" autocapitalize="off" autocomplete="off">
+  </form>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var root = document.documentElement;
+  var calm = root.classList.contains('calm');
+  var $ = function (s, el) { return (el || document).querySelector(s); };
+  var $$ = function (s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); };
+
+  $('#y').textContent = String(new Date().getFullYear());
+
+  /* ---------- scramble: headings decode from noise ---------- */
+  var GLYPHS = '!<>-_/[]{}=+*^?#01ABCDEFabcdef$%&';
+  function scramble(el) {
+    if (calm || el.dataset.done) return;
+    el.dataset.done = '1';
+    var final = el.textContent;
+    var len = final.length;
+    var total = Math.min(42, 14 + len);
+    var frame = 0;
+    (function tick() {
+      var cut = (frame / total) * len;
+      var out = '';
+      for (var i = 0; i < len; i++) {
+        var c = final[i];
+        if (c === ' ' || i < cut) out += c;
+        else out += GLYPHS[(Math.random() * GLYPHS.length) | 0];
+      }
+      el.textContent = out;
+      frame++;
+      if (frame <= total) requestAnimationFrame(tick);
+      else el.textContent = final;
+    })();
+  }
+
+  /* ---------- typing helper ---------- */
+  function type(el, text, speed, done) {
+    var i = 0;
+    el.textContent = '';
+    (function step() {
+      i++;
+      el.textContent = text.slice(0, i);
+      if (i < text.length) setTimeout(step, speed + Math.random() * speed);
+      else if (done) done();
+    })();
+  }
+
+  /* ---------- hero sequence ---------- */
+  function heroStart() {
+    if (calm) return;
+    type($('#whoami'), '> whoami', 55, function () {
+      scramble($('h1[data-scramble]'));
+    });
+    rotator();
+  }
+
+  function rotator() {
+    var el = $('#rot');
+    var phrases = [
+      'giving people their AI back',
+      'grading the tools agents run on',
+      'routing agents to the right tool',
+      'running on caffeine and spite',
+      'sailing somewhere with bad wifi',
+      'writing Go, deleting more Go'
+    ];
+    var pi = 0, ci = phrases[0].length, del = false;
+    setTimeout(function step() {
+      var p = phrases[pi];
+      if (!del) {
+        ci++;
+        el.textContent = p.slice(0, ci);
+        if (ci >= p.length) { del = true; return setTimeout(step, 2600); }
+        setTimeout(step, 40 + Math.random() * 50);
+      } else {
+        ci--;
+        el.textContent = p.slice(0, ci);
+        if (ci <= 0) { del = false; pi = (pi + 1) % phrases.length; return setTimeout(step, 350); }
+        setTimeout(step, 18);
+      }
+    }, 3200);
+  }
+
+  /* ---------- boot sequence, once per session ---------- */
+  function boot(next) {
+    var seen = false;
+    try { seen = sessionStorage.getItem('booted') === '1'; } catch (e) { seen = true; }
+    if (calm || seen) { next(); return; }
+    try { sessionStorage.setItem('booted', '1'); } catch (e) {}
+
+    var rows = [
+      ['0.000', 'booting vladcealicu.com', null, ''],
+      ['0.094', 'mounting /home/vlad', 'ok', 'ok'],
+      ['0.181', 'starting ghost.* (10 daemons)', 'ok', 'ok'],
+      ['0.262', 'starting anchor, letme', 'ok', 'at'],
+      ['0.340', 'loading opinions', 'too many', 'ok'],
+      ['0.415', 'scanning for trackers', 'none', 'ok'],
+      ['0.488', 'scanning for cookies', 'none, have a biscuit', 'ok']
+    ];
+    var lines = rows.map(function (r) {
+      var head = '[  ' + r[0] + '] ';
+      if (!r[2]) return head + r[1];
+      var dots = ' ' + new Array(Math.max(3, 36 - r[1].length)).join('.') + ' ';
+      return head + r[1] + dots + '<span class="' + r[3] + '">' + r[2] + '</span>';
+    });
+    lines.push('<span class="ok">&gt; ready</span>');
+    var box = $('#boot'), out = $('#boot-lines');
+    var finished = false, timers = [];
+    box.classList.add('on');
+
+    function finish() {
+      if (finished) return;
+      finished = true;
+      timers.forEach(clearTimeout);
+      box.classList.add('off');
+      setTimeout(function () { box.classList.remove('on', 'off'); }, 380);
+      document.removeEventListener('keydown', finish);
+      next();
+    }
+    box.addEventListener('click', finish);
+    document.addEventListener('keydown', finish);
+
+    lines.forEach(function (l, i) {
+      timers.push(setTimeout(function () {
+        var d = document.createElement('div');
+        d.innerHTML = l;
+        out.appendChild(d);
+      }, 90 + i * 115));
+    });
+    timers.push(setTimeout(finish, 90 + lines.length * 115 + 380));
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  function reveals() {
+    var targets = $$('.reveal, .stack');
+    if (!('IntersectionObserver' in window) || calm) {
+      targets.forEach(function (t) { t.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.classList.add('in');
+        $$('[data-scramble]', en.target).forEach(scramble);
+        io.unobserve(en.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px' });
+    targets.forEach(function (t) { io.observe(t); });
+  }
+
+  /* ---------- daemon strip timing ---------- */
+  $$('.daemons span').forEach(function (s, i) { s.style.animationDelay = (i * 0.5) + 's'; });
+
+  /* ---------- pointer glow on cards ---------- */
+  $$('.glow').forEach(function (el) {
+    el.addEventListener('pointermove', function (e) {
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+    el.addEventListener('pointerleave', function () {
+      el.style.setProperty('--mx', '-999px');
+      el.style.setProperty('--my', '-999px');
+    });
+  });
+
+  /* ---------- hero monitor: clock and moods ---------- */
+  var clock = $('#clock');
+  var fmt;
+  try { fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }); } catch (e) { fmt = null; }
+  function tickClock() { clock.textContent = 'LDN ' + (fmt ? fmt.format(new Date()) : new Date().toTimeString().slice(0, 8)); }
+  tickClock();
+  setInterval(tickClock, 1000);
+
+  if (!calm) {
+    var moods = {
+      ghost: [['OK', ''], ['CAPTN', 'work'], ['OK', ''], ['IDLE', 'dim']],
+      anchor: [['GRADE', 'work'], ['OK', ''], ['AUDIT', 'work'], ['CRAWL', 'work']],
+      letme: [['ROUTE', ''], ['OK', ''], ['ROUTE', 'work'], ['IDLE', 'dim']]
+    };
+    setInterval(function () {
+      var keys = Object.keys(moods);
+      var k = keys[(Math.random() * keys.length) | 0];
+      var m = moods[k][(Math.random() * moods[k].length) | 0];
+      var el = $('[data-stat="' + k + '"]');
+      el.textContent = m[0];
+      el.className = 'm-stat' + (m[1] ? ' ' + m[1] : '');
+    }, 2300);
+  }
+
+  /* ---------- dot grid ---------- */
+  (function grid() {
+    var cv = $('#grid');
+    if (!cv.getContext || calm) { cv.style.display = 'none'; return; }
+    var ctx = cv.getContext('2d');
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = 0, H = 0, GAP = 26;
+    var px = -9999, py = -9999, lastMove = 0;
+    var sparks = [];
+    var dirty = true;
+
+    function size() {
+      W = window.innerWidth; H = window.innerHeight;
+      cv.width = W * dpr; cv.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      dirty = true;
+    }
+    size();
+    window.addEventListener('resize', size);
+    window.addEventListener('pointermove', function (e) {
+      if (e.pointerType === 'touch') return;
+      px = e.clientX; py = e.clientY; lastMove = performance.now(); dirty = true;
+    }, { passive: true });
+    window.addEventListener('scroll', function () { dirty = true; }, { passive: true });
+
+    setInterval(function () {
+      if (document.hidden) return;
+      sparks.push({
+        x: Math.round(Math.random() * W / GAP) * GAP,
+        y: Math.round(Math.random() * H / GAP) * GAP,
+        life: 1,
+        at: Math.random() < 0.3
+      });
+      dirty = true;
+    }, 420);
+
+    function draw(now) {
+      requestAnimationFrame(draw);
+      var moving = now - lastMove < 1200;
+      if (!dirty && !moving && sparks.length === 0) return;
+      dirty = false;
+      ctx.clearRect(0, 0, W, H);
+      var R = 150, R2 = R * R;
+      var fade = moving ? 1 : Math.max(0, 1 - (now - lastMove - 1200) / 800);
+      for (var y = GAP / 2; y < H; y += GAP) {
+        for (var x = GAP / 2; x < W; x += GAP) {
+          var dx = x - px, dy = y - py, d2 = dx * dx + dy * dy;
+          var a = 0.07;
+          if (d2 < R2 && fade > 0) a += (1 - Math.sqrt(d2) / R) * 0.55 * fade;
+          ctx.fillStyle = 'rgba(51,255,0,' + a.toFixed(3) + ')';
+          ctx.fillRect(x - 1, y - 1, 2, 2);
+        }
+      }
+      for (var i = sparks.length - 1; i >= 0; i--) {
+        var s = sparks[i];
+        s.life -= 0.012;
+        if (s.life <= 0) { sparks.splice(i, 1); continue; }
+        ctx.fillStyle = (s.at ? 'rgba(45,212,191,' : 'rgba(51,255,0,') + (s.life * 0.7).toFixed(3) + ')';
+        ctx.fillRect(s.x + GAP / 2 - 1.5, s.y + GAP / 2 - 1.5, 3, 3);
+      }
+      if (fade > 0 || sparks.length) dirty = true;
+    }
+    requestAnimationFrame(draw);
+  })();
+
+  /* ---------- Anchor viz: grade them all, anchor the one ---------- */
+  (function viz() {
+    var svg = $('#viz-svg');
+    if (!svg) return;
+    var NS = 'http://www.w3.org/2000/svg';
+    function mk(tag, attrs, parent) {
+      var el = document.createElementNS(NS, tag);
+      for (var k in attrs) el.setAttribute(k, attrs[k]);
+      (parent || svg).appendChild(el);
+      return el;
+    }
+
+    var CATS = ['models', 'web & data', 'payments', 'business'];
+    var SPLIT = [3, 3, 2, 3]; // tools per category
+    var rootN = { x: 46, y: 105 };
+    var endN = { x: 556, y: 105 };
+    var cats = CATS.map(function (_, i) { return { x: 200, y: 30 + i * 50 }; });
+    var tools = [];
+    var t = 0;
+    SPLIT.forEach(function (n, ci) {
+      for (var j = 0; j < n; j++) tools.push({ x: 380, y: 14 + t * 18.2, cat: ci, i: t++ });
+    });
+
+    var gE = mk('g', {}), gN = mk('g', {}), gL = mk('g', {});
+    var eRootCat = cats.map(function (c) { return mk('line', { x1: rootN.x, y1: rootN.y, x2: c.x, y2: c.y, class: 'e' }, gE); });
+    var eCatTool = tools.map(function (tl) { var c = cats[tl.cat]; return mk('line', { x1: c.x, y1: c.y, x2: tl.x, y2: tl.y, class: 'e' }, gE); });
+    var eEnd = mk('line', { x1: tools[0].x, y1: tools[0].y, x2: endN.x, y2: endN.y, class: 'e draw', pathLength: '1' }, gE);
+
+    mk('circle', { cx: rootN.x, cy: rootN.y, r: 5, class: 'n root' }, gN);
+    var nCats = cats.map(function (c) { return mk('circle', { cx: c.x, cy: c.y, r: 4.5, class: 'n' }, gN); });
+    var nTools = tools.map(function (tl) { return mk('circle', { cx: tl.x, cy: tl.y, r: 4, class: 'n' }, gN); });
+    var nEnd = mk('circle', { cx: endN.x, cy: endN.y, r: 6, class: 'n' }, gN);
+
+    var lt = mk('text', { x: rootN.x, y: rootN.y + 20, 'text-anchor': 'middle', class: 'lbl' }, gL); lt.textContent = 'task';
+    cats.forEach(function (c, i) { var l = mk('text', { x: c.x, y: c.y - 9, 'text-anchor': 'middle', class: 'lbl' }, gL); l.textContent = CATS[i]; });
+    var le = mk('text', { x: endN.x + 12, y: endN.y + 24, 'text-anchor': 'end', class: 'lbl end' }, gL); le.textContent = 'your agent';
+    var grades = tools.map(function (tl) { return mk('text', { x: tl.x + 10, y: tl.y + 3.5, class: 'g' }, gL); });
+
+    var TASKS = [
+      ['speech to text', 0], ['caption 30k photos', 0], ['scrape a page', 1], ['web search', 1],
+      ['bitcoin price feed', 1], ['take a payment', 2], ['send an invoice', 2],
+      ['company lookup', 3], ['parse a pdf', 3]
+    ];
+    var POOL = ['A', 'A', 'BB', 'BB', 'B', 'B', 'C', 'C', 'D', 'E', 'F'];
+    var cmd = $('#viz-cmd'), out = $('#viz-out');
+    var visible = false, running = false, timers = [], ti = 0;
+
+    function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+    function cls(el, add, rem) {
+      var c = (el.getAttribute('class') || '').split(' ').filter(function (x) { return x && rem.indexOf(x) < 0; });
+      add.forEach(function (a) { if (c.indexOf(a) < 0) c.push(a); });
+      el.setAttribute('class', c.join(' '));
+    }
+
+    function cycle() {
+      timers.forEach(clearTimeout); timers = [];
+      if (!visible) { running = false; return; }
+      running = true;
+      var task = TASKS[ti++ % TASKS.length];
+      var inCat = tools.filter(function (tl) { return tl.cat === task[1]; });
+      var win = inCat[(Math.random() * inCat.length) | 0];
+
+      // reset
+      eRootCat.concat(eCatTool).forEach(function (e) { cls(e, [], ['scan', 'dim', 'lit']); });
+      cls(eEnd, [], ['lit']);
+      eEnd.setAttribute('x1', win.x); eEnd.setAttribute('y1', win.y);
+      nCats.concat(nTools).forEach(function (n) { cls(n, [], ['probe', 'dim', 'solid']); });
+      cls(nEnd, [], ['solid']); cls(le, [], ['lit']);
+      grades.forEach(function (g) { cls(g, [], ['show', 'dim', 'aa']); g.textContent = ''; });
+      out.innerHTML = '&nbsp;';
+
+      if (calm) { cmd.textContent = 'letme find "' + task[0] + '"'; }
+      else type(cmd, 'letme find "' + task[0] + '"', 28);
+
+      // fan out
+      later(function () {
+        out.textContent = 'searching every listing...';
+        eRootCat.forEach(function (e, i) { later(function () { cls(e, ['scan'], []); cls(nCats[i], ['probe'], []); }, i * 70); });
+      }, 900);
+      later(function () {
+        eCatTool.forEach(function (e, i) { later(function () { cls(e, ['scan'], []); cls(nTools[i], ['probe'], []); }, i * 45); });
+      }, 1300);
+      // grade them all
+      later(function () {
+        out.textContent = 'grading from public evidence...';
+        grades.forEach(function (g, i) {
+          later(function () {
+            g.textContent = tools[i] === win ? 'AA' : POOL[(Math.random() * POOL.length) | 0];
+            cls(g, tools[i] === win ? ['show', 'aa'] : ['show'], []);
+          }, i * 65);
+        });
+      }, 2000);
+      // anchor the one
+      later(function () {
+        eRootCat.forEach(function (e, i) { cls(e, i === win.cat ? ['lit'] : ['dim'], ['scan']); cls(nCats[i], i === win.cat ? ['solid'] : ['dim'], ['probe']); });
+        eCatTool.forEach(function (e, i) { cls(e, tools[i] === win ? ['lit'] : ['dim'], ['scan']); cls(nTools[i], tools[i] === win ? ['solid'] : ['dim'], ['probe']); });
+        grades.forEach(function (g, i) { if (tools[i] !== win) cls(g, ['dim'], []); });
+        cls(eEnd, ['lit'], []);
+        later(function () { cls(nEnd, ['solid'], []); cls(le, ['lit'], []); }, 600);
+        out.innerHTML = 'graded ' + tools.length + ' &middot; anchored <b>1</b> &middot; grade <b>AA</b>';
+      }, 3100);
+      later(cycle, 6400);
+    }
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) {
+        visible = en[0].isIntersecting;
+        if (visible && !running) cycle();
+      }, { threshold: 0.25 }).observe(svg);
+    } else { visible = true; cycle(); }
+  })();
+
+  /* ---------- the shell ---------- */
+  (function shell() {
+    var box = $('#shell'), out = $('#shell-out'), form = $('#shell-form'), input = $('#shell-in');
+    var hist = [], hi = 0, greeted = false;
+
+    function print(html, cl) {
+      var d = document.createElement('div');
+      if (cl) d.className = cl;
+      d.innerHTML = html;
+      out.appendChild(d);
+      out.scrollTop = out.scrollHeight;
+    }
+    function esc(s) { return s.replace(/[&<>"']/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]; }); }
+
+    function open() {
+      box.classList.add('open');
+      if (!greeted) {
+        greeted = true;
+        print('vladcealicu.com shell. nothing here is logged, there is nowhere to log it to.', 'd');
+        print('type <span class="c">help</span> to start.', 'd');
+      }
+      setTimeout(function () { input.focus(); }, 50);
+    }
+    function close() { box.classList.remove('open'); input.blur(); }
+
+    var go = function (url) { setTimeout(function () { window.location.href = url; }, 500); };
+    var since = new Date(1986, 0, 1);
+
+    var cmds = {
+      help: function () {
+        return 'whoami      ls          cat &lt;file&gt;    open &lt;site&gt;\n' +
+               'uptime      date        roll [dN]     ghost\n' +
+               'anchor      grade &lt;x&gt;   sudo          clear     exit';
+      },
+      whoami: function () { return 'vlad. founder, ex-CTO, chaotic good.\nRomanian by birth, British by accident.'; },
+      ls: function () { return '<span class="c">localghost/</span>  <span class="at">anchor/</span>  <span class="c">hard-truths/</span>  ccdata.tar.gz  opinions.txt  todo.md'; },
+      cat: function (a) {
+        var f = (a[0] || '').replace(/\/$/, '');
+        if (!f) return '<span class="err">cat: which file? try ls</span>';
+        if (f === 'ccdata.tar.gz') return 'twelve years, compressed. extracted by CoinDesk in October 2024.';
+        if (f === 'opinions.txt') return 'file too large to print. it is published in instalments as Hard Truths.';
+        if (f === 'todo.md') return '- [x] sell a company\n- [x] build a box that keeps your data at home\n- [ ] grade every tool an agent can call\n- [ ] sleep (deprecated)';
+        if (f === 'localghost' || f === 'anchor' || f === 'hard-truths') return '<span class="err">cat: ' + esc(f) + ': is a directory. try open ' + esc(f) + '</span>';
+        return '<span class="err">cat: ' + esc(f) + ': no such file</span>';
+      },
+      open: function (a) {
+        var sites = {
+          localghost: 'https://www.localghost.ai',
+          anchor: 'https://www.anchorterminal.com/',
+          letme: 'https://letme.dev',
+          'hard-truths': 'https://www.localghost.ai/hard-truths',
+          github: 'https://github.com/vcealicu'
+        };
+        var k = (a[0] || '').replace(/\/$/, '');
+        if (!sites[k]) return 'open what? ' + Object.keys(sites).join(', ');
+        go(sites[k]);
+        return 'opening ' + sites[k] + ' ...';
+      },
+      uptime: function () {
+        var days = Math.floor((Date.now() - since) / 864e5);
+        return 'up ' + days.toLocaleString('en-GB') + ' days, load average 2 startups, 1 boat, 0 cloud bills';
+      },
+      date: function () { return new Date().toString(); },
+      roll: function (a) {
+        var n = parseInt(String(a[0] || 'd20').replace(/^d/i, ''), 10);
+        if (!(n > 1 && n <= 1000)) n = 20;
+        var r = 1 + ((Math.random() * n) | 0);
+        var s = 'd' + n + ' rolled ' + r + '.';
+        if (n === 20 && r === 20) s += ' natural 20. ship it on a Friday.';
+        else if (n === 20 && r === 1) s += ' natural 1. the deploy script asks for sudo.';
+        return s;
+      },
+      ghost: function () {
+        return '<span class="c">   .-.\n  (o o)   boo.\n  | O \\   your data stayed home.\n   \\   \\\n    `~~~\'</span>';
+      },
+      anchor: function () { return '<span class="at">grade them all. anchor the one.</span>\ntry grade &lt;anything&gt;, or open anchor'; },
+      grade: function (a) {
+        var x = a.join(' ').trim();
+        if (!x) return 'grade what?';
+        var low = x.toLowerCase();
+        if (low === 'vlad' || low === 'me' || low === 'vladcealicu.com') return 'no. founders do not grade themselves. that is the whole point.';
+        if (low === 'localghost' || low === 'letme') return 'listed and graded on Anchor Terminal like everything else, with a founder disclosure at the bottom.';
+        var g = ['AA', 'A', 'BB', 'B', 'C', 'D', 'E', 'F'][(x.length * 7 + x.charCodeAt(0)) % 8];
+        return esc(x) + ': ' + g + ' (made up, this is a shell. the real ones are sourced)';
+      },
+      sudo: function () { return 'vlad is not in the sudoers file. this incident will be reported to nobody, there are no trackers.'; },
+      rm: function () { return 'it is one static html file on a NAS in my flat. I would redeploy before the kettle boils.'; },
+      coffee: function () { return '418 I\'m a teapot'; },
+      hello: function () { return 'hello. you found the shell, which says more about you than me.'; },
+      exit: function () { setTimeout(close, 150); return 'bye.'; },
+      clear: function () { out.innerHTML = ''; return null; }
+    };
+    cmds.hi = cmds.hello;
+    cmds.quit = cmds.exit;
+    cmds.cd = cmds.open;
+    cmds['make'] = function (a) { return a[0] === 'coffee' ? cmds.coffee() : 'make: nothing to be done.'; };
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var line = input.value.trim();
+      input.value = '';
+      if (!line) return;
+      hist.push(line); hi = hist.length;
+      print('<span class="c">$</span> ' + esc(line));
+      var parts = line.split(/\s+/);
+      var fn = cmds[parts[0].toLowerCase()];
+      var res = fn ? fn(parts.slice(1)) : '<span class="err">' + esc(parts[0]) + ': command not found. try help</span>';
+      if (res !== null && res !== undefined) print(res);
+    });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowUp' && hi > 0) { hi--; input.value = hist[hi]; e.preventDefault(); }
+      else if (e.key === 'ArrowDown') { hi = Math.min(hist.length, hi + 1); input.value = hist[hi] || ''; e.preventDefault(); }
+      else if (e.key === 'Escape') close();
+      e.stopPropagation();
+    });
+    document.addEventListener('keydown', function (e) {
+      var tag = (e.target && e.target.tagName) || '';
+      if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+      if (e.key === '`' || e.key === '~') { e.preventDefault(); box.classList.contains('open') ? close() : open(); }
+      else if (e.key === 'Escape' && box.classList.contains('open')) close();
+    });
+    $('#shell-open').addEventListener('click', open);
+    $('#shell-close').addEventListener('click', close);
+  })();
+
+  /* ---------- go ---------- */
+  boot(function () {
+    heroStart();
+    reveals();
+  });
+})();
+</script>
 
 </body>
 </html>
