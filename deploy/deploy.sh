@@ -2,6 +2,7 @@
 # ─────────────────────────────────────────────────────────
 # Deploy script — vladcealicu.com
 # Run as: coder
+#   SKIP_PING=1 ./deploy.sh   → deploy without pinging search engines
 # ─────────────────────────────────────────────────────────
 set -euo pipefail
 
@@ -12,6 +13,8 @@ DEST_DIR="/var/www/vladcealicu.com/public"
 NGINX_SRC="$DEPLOY_DIR/nginx.conf"
 NGINX_DEST="/etc/nginx/sites-available/www.vladcealicu.com"
 SITE_URL="https://www.vladcealicu.com"
+SITE_HOST="www.vladcealicu.com"
+INDEXNOW_KEY_FILE="$DEPLOY_DIR/indexnow.key"
 
 echo ""
 echo "  ╔═══════════════════════════════════════╗"
@@ -19,28 +22,43 @@ echo "  ║  🚀 DEPLOY — vladcealicu.com"
 echo "  ╚═══════════════════════════════════════╝"
 echo ""
 
-# Sync public/ → /var/www/
+# ── IndexNow key (public by design, made once on this server, then reused) ──
+if [ ! -s "$INDEXNOW_KEY_FILE" ]; then
+    head -c 16 /dev/urandom | od -An -tx1 | tr -d ' \n' > "$INDEXNOW_KEY_FILE"
+    echo "  [🔑] new IndexNow key in deploy/indexnow.key"
+fi
+INDEXNOW_KEY="$(cat "$INDEXNOW_KEY_FILE")"
+
+# ── Sync public/ → /var/www/ ──
 echo "> SYNCING FILES..."
-rsync -av --checksum --delete \
+rsync -av8 --checksum --delete \
     --exclude='sitemap.xml' \
+    --exclude="${INDEXNOW_KEY}.txt" \
     --out-format="  [↑] %n" \
     "$SRC_DIR"/ "$DEST_DIR"/
 
-# Generate sitemap
+# IndexNow verification file at the site root
+printf '%s' "$INDEXNOW_KEY" > "$DEST_DIR/${INDEXNOW_KEY}.txt"
+
+# ── Sitemap (HTML pages only; the .md twins are linked from each page) ──
 echo ""
 echo "> GENERATING SITEMAP..."
-LASTMOD=$(date +%Y-%m-%d)
+lastmod() { date -u -r "$1" +%Y-%m-%d; }
 
-cat > "$DEST_DIR/sitemap.xml" << EOF
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>${SITE_URL}/</loc>
-    <lastmod>${LASTMOD}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-EOF
+PAGE_URLS=()
+{
+    echo '<?xml version="1.0" encoding="UTF-8"?>'
+    echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
+    echo '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">'
+    echo '  <url>'
+    echo "    <loc>${SITE_URL}/</loc>"
+    echo "    <lastmod>$(lastmod "$SRC_DIR/index.html")</lastmod>"
+    echo '    <image:image>'
+    echo "      <image:loc>${SITE_URL}/images/vlad.png</image:loc>"
+    echo '    </image:image>'
+    echo '  </url>'
+} > "$DEST_DIR/sitemap.xml"
+PAGE_URLS+=("${SITE_URL}/")
 
 while IFS= read -r -d '' html_file; do
     rel="${html_file#$SRC_DIR/}"
@@ -51,35 +69,59 @@ while IFS= read -r -d '' html_file; do
     else
         url="/${rel%.html}"
     fi
-    cat >> "$DEST_DIR/sitemap.xml" << EOF
-  <url>
-    <loc>${SITE_URL}${url}</loc>
-    <lastmod>${LASTMOD}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-EOF
+    {
+        echo '  <url>'
+        echo "    <loc>${SITE_URL}${url}</loc>"
+        echo "    <lastmod>$(lastmod "$html_file")</lastmod>"
+        echo '  </url>'
+    } >> "$DEST_DIR/sitemap.xml"
+    PAGE_URLS+=("${SITE_URL}${url}")
 done < <(find "$SRC_DIR" -name "*.html" -type f -print0)
 
 echo "</urlset>" >> "$DEST_DIR/sitemap.xml"
-echo "  [📍] sitemap.xml"
+echo "  [📍] sitemap.xml (${#PAGE_URLS[@]} pages)"
 
-# Nginx config (if changed)
+# ── Nginx config (if changed), rolled back if it doesn't pass nginx -t ──
 if [ -f "$NGINX_SRC" ]; then
     if ! cmp -s "$NGINX_SRC" "$NGINX_DEST" 2>/dev/null; then
         echo ""
         echo "> NGINX CONFIG..."
+        BACKUP="$(mktemp)"
+        sudo cp "$NGINX_DEST" "$BACKUP" 2>/dev/null || true
         sudo cp "$NGINX_SRC" "$NGINX_DEST"
         if sudo nginx -t 2>&1 | grep -q "successful"; then
             sudo systemctl reload nginx
             echo "  [⚡] nginx deployed & reloaded"
         else
-            echo "  [✗] nginx config invalid — not reloaded"
+            sudo nginx -t || true
+            if [ -s "$BACKUP" ]; then
+                sudo cp "$BACKUP" "$NGINX_DEST"
+                echo "  [✗] nginx config invalid, previous config restored, not reloaded"
+            else
+                echo "  [✗] nginx config invalid, not reloaded (no previous config to restore)"
+            fi
         fi
+        rm -f "$BACKUP"
     else
         echo ""
         echo "  [—] nginx unchanged"
     fi
+fi
+
+# ── Tell search engines (IndexNow covers Bing, Yandex, Seznam, Naver; Google reads the sitemap) ──
+if [ "${SKIP_PING:-0}" != "1" ] && command -v curl >/dev/null 2>&1; then
+    echo ""
+    echo "> PINGING INDEXNOW..."
+    URL_JSON=$(printf '"%s",' "${PAGE_URLS[@]}" "${SITE_URL}/llms.txt" "${SITE_URL}/index.md")
+    URL_JSON="[${URL_JSON%,}]"
+    code=$(curl -s -o /dev/null -w '%{http_code}' -m 15 \
+        -H 'Content-Type: application/json; charset=utf-8' \
+        -d "{\"host\":\"${SITE_HOST}\",\"key\":\"${INDEXNOW_KEY}\",\"keyLocation\":\"${SITE_URL}/${INDEXNOW_KEY}.txt\",\"urlList\":${URL_JSON}}" \
+        https://api.indexnow.org/indexnow || echo "000")
+    case "$code" in
+        200|202) echo "  [📡] IndexNow accepted ($code)" ;;
+        *)       echo "  [!] IndexNow returned $code (deploy is fine, search engines will find it anyway)" ;;
+    esac
 fi
 
 echo ""

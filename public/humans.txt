@@ -1,0 +1,16 @@
+/* TEAM */
+Built by: Vlad Cealicu
+Site: https://www.vladcealicu.com/
+Contact: vlad@localghost.ai
+X: @vcealicu
+From: London, United Kingdom
+
+/* SITE */
+Last update: 2026/10/11
+Language: English (British)
+Standards: HTML5, CSS3, plain JavaScript
+Libraries: none
+Trackers: none
+Cookies: none, have a biscuit
+Hosting: a NAS in a flat in London, behind nginx
+Agents: start at /llms.txt

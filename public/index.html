@@ -4,12 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vlad Cealicu. Founder of LocalGhost.ai and Anchor Terminal, ex-CTO CryptoCompare</title>
-<meta name="description" content="Vlad Cealicu. Founder of LocalGhost.ai and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData (acquired by CoinDesk, 2024). Backends in Go and Node, writing on sovereignty, AI, agents and incentive design.">
+<title>Vlad Cealicu. Founder of LocalGhost.ai and Anchor Terminal</title>
+<meta name="description" content="Vlad Cealicu, founder of LocalGhost.ai and Anchor Terminal. Ex co-founder and CTO of CryptoCompare / CCData, acquired by CoinDesk in 2024. Go, AI and agents.">
 <meta name="author" content="Vlad Cealicu">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#111111">
+<meta name="color-scheme" content="dark">
 <link rel="canonical" href="https://www.vladcealicu.com/">
+
+<!-- For agents: the same page as Markdown, and the llms.txt index -->
+<link rel="alternate" type="text/markdown" href="/index.md" title="Vlad Cealicu (Markdown)">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+<link rel="author" href="/humans.txt">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<!-- Identity links (rel=me) -->
+<link rel="me" href="https://github.com/vcealicu">
+<link rel="me" href="https://x.com/vcealicu">
+<link rel="me" href="https://uk.linkedin.com/in/vcealicu">
+<link rel="me" href="https://medium.com/@vcealicu">
+<link rel="me" href="mailto:vlad@localghost.ai">
 
 <!-- Favicons -->
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -19,17 +33,20 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="preload" as="image" type="image/webp" imagesrcset="/images/vlad-200.webp 200w, /images/vlad.webp 400w" imagesizes="(max-width: 720px) 120px, 160px" fetchpriority="high">
 
 <!-- Open Graph -->
 <meta property="og:type" content="profile">
-<meta property="og:site_name" content="www.vladcealicu.com">
+<meta property="og:site_name" content="Vlad Cealicu">
 <meta property="og:title" content="Vlad Cealicu. Founder of LocalGhost.ai and Anchor Terminal">
-<meta property="og:description" content="Founder of LocalGhost.ai and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData. Backends in Go and Node, writing on sovereignty, AI, agents and incentive design.">
+<meta property="og:description" content="Founder of LocalGhost.ai and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData. Backends in Go, writing on sovereignty, AI, agents and incentive design.">
 <meta property="og:url" content="https://www.vladcealicu.com/">
 <meta property="og:image" content="https://www.vladcealicu.com/images/og-image-v2.png">
+<meta property="og:image:secure_url" content="https://www.vladcealicu.com/images/og-image-v2.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Vlad Cealicu, founder of LocalGhost.ai and Anchor Terminal, previously CTO at CCData.">
+<meta property="og:image:alt" content="Vlad Cealicu, founder of LocalGhost.ai and Anchor Terminal, previously CTO at CryptoCompare / CCData.">
 <meta property="og:locale" content="en_GB">
 <meta property="profile:first_name" content="Vlad">
 <meta property="profile:last_name" content="Cealicu">
@@ -40,58 +57,106 @@
 <meta name="twitter:site" content="@vcealicu">
 <meta name="twitter:creator" content="@vcealicu">
 <meta name="twitter:title" content="Vlad Cealicu. Founder of LocalGhost.ai and Anchor Terminal">
-<meta name="twitter:description" content="Founder of LocalGhost.ai and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData. Backends in Go and Node.">
+<meta name="twitter:description" content="Founder of LocalGhost.ai and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData. Backends in Go.">
 <meta name="twitter:image" content="https://www.vladcealicu.com/images/og-image-v2.png">
 <meta name="twitter:image:alt" content="Vlad Cealicu, founder of LocalGhost.ai and Anchor Terminal.">
 
-<!-- JSON-LD structured data -->
+<!-- JSON-LD structured data, one linked graph -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Vlad Cealicu",
-  "url": "https://www.vladcealicu.com/",
-  "image": "https://www.vladcealicu.com/images/vlad.png",
-  "jobTitle": "Founder",
-  "description": "Founder of LocalGhost.ai and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData (acquired by CoinDesk, October 2024).",
-  "worksFor": [
+  "@graph": [
     {
-      "@type": "Organization",
-      "name": "LocalGhost",
-      "url": "https://www.localghost.ai/"
+      "@type": "ProfilePage",
+      "@id": "https://www.vladcealicu.com/#profile",
+      "url": "https://www.vladcealicu.com/",
+      "name": "Vlad Cealicu. Founder of LocalGhost.ai and Anchor Terminal",
+      "inLanguage": "en-GB",
+      "dateModified": "2026-10-11",
+      "isPartOf": { "@id": "https://www.vladcealicu.com/#website" },
+      "mainEntity": { "@id": "https://www.vladcealicu.com/#vlad" },
+      "primaryImageOfPage": { "@id": "https://www.vladcealicu.com/#portrait" },
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://www.vladcealicu.com/index.md",
+        "encodingFormat": "text/markdown"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.vladcealicu.com/#website",
+      "url": "https://www.vladcealicu.com/",
+      "name": "Vlad Cealicu",
+      "alternateName": "vladcealicu.com",
+      "inLanguage": "en-GB",
+      "publisher": { "@id": "https://www.vladcealicu.com/#vlad" }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://www.vladcealicu.com/#portrait",
+      "url": "https://www.vladcealicu.com/images/vlad.png",
+      "contentUrl": "https://www.vladcealicu.com/images/vlad.png",
+      "width": 400,
+      "height": 400,
+      "caption": "Vlad Cealicu"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.vladcealicu.com/#vlad",
+      "name": "Vlad Cealicu",
+      "givenName": "Vlad",
+      "familyName": "Cealicu",
+      "alternateName": ["vcealicu", "zerocool.eth"],
+      "url": "https://www.vladcealicu.com/",
+      "image": { "@id": "https://www.vladcealicu.com/#portrait" },
+      "email": "mailto:vlad@localghost.ai",
+      "jobTitle": "Founder",
+      "description": "Founder of LocalGhost.ai and Anchor Terminal. Previously co-founder and CTO of CryptoCompare / CCData (acquired by CoinDesk, October 2024).",
+      "homeLocation": { "@type": "Place", "name": "London, United Kingdom" },
+      "worksFor": [
+        { "@id": "https://www.localghost.ai/#org" },
+        { "@id": "https://www.anchorterminal.com/#org" }
+      ],
+      "alumniOf": [
+        { "@id": "https://www.ccdata.io/#org" }
+      ],
+      "knowsAbout": ["Go", "Node.js", "Postgres", "Redis", "Distributed systems", "Cryptocurrency market data", "Financial benchmarks and indices", "Local-first AI", "AI agents", "Agent tooling", "MCP servers", "Privacy engineering", "Backend architecture"],
+      "knowsLanguage": ["en", "ro"],
+      "sameAs": [
+        "https://github.com/vcealicu",
+        "https://x.com/vcealicu",
+        "https://uk.linkedin.com/in/vcealicu",
+        "https://medium.com/@vcealicu",
+        "https://etherscan.io/address/zerocool.eth"
+      ]
     },
     {
       "@type": "Organization",
-      "name": "Anchor Terminal",
-      "url": "https://www.anchorterminal.com/"
-    }
-  ],
-  "alumniOf": [
+      "@id": "https://www.localghost.ai/#org",
+      "name": "LocalGhost",
+      "alternateName": "LocalGhost.ai",
+      "url": "https://www.localghost.ai/",
+      "description": "Local-first, privacy-by-architecture personal AI platform that runs on hardware you own.",
+      "founder": { "@id": "https://www.vladcealicu.com/#vlad" },
+      "sameAs": ["https://github.com/LocalGhostDao", "https://x.com/localghostai"]
+    },
     {
       "@type": "Organization",
+      "@id": "https://www.anchorterminal.com/#org",
+      "name": "Anchor Terminal",
+      "url": "https://www.anchorterminal.com/",
+      "description": "Benchmark, directory and review layer for everything AI agents run on, graded AA to F from public evidence.",
+      "founder": { "@id": "https://www.vladcealicu.com/#vlad" },
+      "sameAs": ["https://letme.dev"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.ccdata.io/#org",
       "name": "CryptoCompare / CCData",
-      "url": "https://www.ccdata.io/"
+      "url": "https://www.ccdata.io/",
+      "founder": { "@id": "https://www.vladcealicu.com/#vlad" }
     }
-  ],
-  "knowsAbout": ["Go", "Node.js", "Postgres", "Redis", "Distributed systems", "Cryptocurrency data", "Benchmarks and indices", "Local-first AI", "AI agents", "Agent tooling", "Cypherpunk", "Backend architecture"],
-  "sameAs": [
-    "https://github.com/vcealicu",
-    "https://github.com/LocalGhostDao",
-    "https://x.com/vcealicu",
-    "https://uk.linkedin.com/in/vcealicu",
-    "https://medium.com/@vcealicu",
-    "https://www.localghost.ai/",
-    "https://www.anchorterminal.com/"
   ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://www.vladcealicu.com/",
-  "name": "www.vladcealicu.com",
-  "author": { "@type": "Person", "name": "Vlad Cealicu" }
 }
 </script>
 
@@ -99,7 +164,8 @@
   // Flag JS early so reveal styles never hide content for no-JS readers and crawlers.
   document.documentElement.classList.add('js');
   try {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('calm');
+    var bot = navigator.webdriver || /bot|crawl|spider|slurp|preview|lighthouse|headless|facebookexternalhit|embedly|quora|whatsapp|telegram|discord|slack/i.test(navigator.userAgent || '');
+    if (bot || window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('calm');
   } catch (e) {}
 </script>
 
@@ -171,16 +237,6 @@
     animation: sweep 9s linear infinite;
   }
   @keyframes sweep { to { transform: translateY(140vh); } }
-
-  /* Dot grid that wakes up around the pointer */
-  #grid {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
-  }
 
   a {
     color: var(--terminal);
@@ -869,26 +925,6 @@
   }
   html:not(.js) .shell-hint-wrap { display: none; }
 
-  /* Boot sequence, once per visit */
-  #boot {
-    position: fixed;
-    inset: 0;
-    z-index: 9000;
-    background: var(--void);
-    display: none;
-    padding: 2rem 1.5rem;
-    font-size: 13px;
-    color: var(--text-dim);
-    cursor: pointer;
-    transition: opacity 0.35s ease;
-  }
-  #boot.on { display: block; }
-  #boot.off { opacity: 0; }
-  #boot .box { max-width: 880px; margin: 0 auto; }
-  #boot .ok { color: var(--terminal); }
-  #boot .at { color: var(--beacon); }
-  #boot .skip { position: fixed; bottom: 1.25rem; right: 1.5rem; font-size: 11px; opacity: 0.6; }
-
   /* The shell */
   #shell {
     position: fixed;
@@ -898,7 +934,7 @@
     width: min(880px, calc(100% - 2rem));
     height: min(52vh, 420px);
     z-index: 9500;
-    background: rgba(10, 10, 10, 0.97);
+    background: #0a0a0a;
     border: 1px solid var(--terminal);
     box-shadow: 0 0 40px rgba(51, 255, 0, 0.12);
     display: flex;
@@ -982,15 +1018,11 @@
 </head>
 <body>
 
-<canvas id="grid" aria-hidden="true"></canvas>
-
-<div id="boot" aria-hidden="true"><div class="box" id="boot-lines"></div><div class="skip">any key to skip</div></div>
-
 <div class="wrap">
 
   <header class="top">
     <div class="brand">&gt; me@vladcealicu.com</div>
-    <nav class="top-nav">
+    <nav class="top-nav" aria-label="Sections">
       <a href="#now">NOW</a>
       <a href="#localghost">LOCALGHOST</a>
       <a href="#anchor" class="anchor-link">ANCHOR</a>
@@ -1224,12 +1256,12 @@
       <a href="https://www.localghost.ai">www.localghost.ai <span>↗</span></a>
       <a class="at" href="https://www.anchorterminal.com/">www.anchorterminal.com <span>↗</span></a>
       <a class="at" href="https://letme.dev">letme.dev <span>↗</span></a>
-      <a href="https://github.com/vcealicu">github / vcealicu <span>↗</span></a>
+      <a rel="me" href="https://github.com/vcealicu">github / vcealicu <span>↗</span></a>
       <a href="https://github.com/LocalGhostDao">github / LocalGhostDao <span>↗</span></a>
-      <a href="https://medium.com/@vcealicu">medium <span>↗</span></a>
-      <a href="https://x.com/vcealicu">x / @vcealicu <span>↗</span></a>
-      <a href="https://uk.linkedin.com/in/vcealicu">linkedin <span>↗</span></a>
-      <a href="mailto:vlad@localghost.ai">vlad@localghost.ai <span>✉</span></a>
+      <a rel="me" href="https://medium.com/@vcealicu">medium <span>↗</span></a>
+      <a rel="me" href="https://x.com/vcealicu">x / @vcealicu <span>↗</span></a>
+      <a rel="me" href="https://uk.linkedin.com/in/vcealicu">linkedin <span>↗</span></a>
+      <a rel="me" href="mailto:vlad@localghost.ai">vlad@localghost.ai <span>✉</span></a>
       <a href="https://etherscan.io/address/zerocool.eth">zerocool.eth <span>⛓</span></a>
     </div>
   </section>
@@ -1239,6 +1271,7 @@
   <footer>
     <div>
       &copy; <span id="y">2026</span> Vlad Cealicu &middot; static html, no trackers, no cookies.<br>
+      agents start at <a href="/llms.txt">/llms.txt</a> or <a href="/index.md" type="text/markdown">/index.md</a><br>
       <span class="shell-hint-wrap"><button type="button" class="shell-hint" id="shell-open">press <kbd>`</kbd> for a shell</button></span>
     </div>
     <div class="quote">
@@ -1341,55 +1374,6 @@
     }, 3200);
   }
 
-  /* ---------- boot sequence, once per session ---------- */
-  function boot(next) {
-    var seen = false;
-    try { seen = sessionStorage.getItem('booted') === '1'; } catch (e) { seen = true; }
-    if (calm || seen) { next(); return; }
-    try { sessionStorage.setItem('booted', '1'); } catch (e) {}
-
-    var rows = [
-      ['0.000', 'booting vladcealicu.com', null, ''],
-      ['0.094', 'mounting /home/vlad', 'ok', 'ok'],
-      ['0.181', 'starting ghost.* (10 daemons)', 'ok', 'ok'],
-      ['0.262', 'starting anchor, letme', 'ok', 'at'],
-      ['0.340', 'loading opinions', 'too many', 'ok'],
-      ['0.415', 'scanning for trackers', 'none', 'ok'],
-      ['0.488', 'scanning for cookies', 'none, have a biscuit', 'ok']
-    ];
-    var lines = rows.map(function (r) {
-      var head = '[  ' + r[0] + '] ';
-      if (!r[2]) return head + r[1];
-      var dots = ' ' + new Array(Math.max(3, 36 - r[1].length)).join('.') + ' ';
-      return head + r[1] + dots + '<span class="' + r[3] + '">' + r[2] + '</span>';
-    });
-    lines.push('<span class="ok">&gt; ready</span>');
-    var box = $('#boot'), out = $('#boot-lines');
-    var finished = false, timers = [];
-    box.classList.add('on');
-
-    function finish() {
-      if (finished) return;
-      finished = true;
-      timers.forEach(clearTimeout);
-      box.classList.add('off');
-      setTimeout(function () { box.classList.remove('on', 'off'); }, 380);
-      document.removeEventListener('keydown', finish);
-      next();
-    }
-    box.addEventListener('click', finish);
-    document.addEventListener('keydown', finish);
-
-    lines.forEach(function (l, i) {
-      timers.push(setTimeout(function () {
-        var d = document.createElement('div');
-        d.innerHTML = l;
-        out.appendChild(d);
-      }, 90 + i * 115));
-    });
-    timers.push(setTimeout(finish, 90 + lines.length * 115 + 380));
-  }
-
   /* ---------- reveal on scroll ---------- */
   function reveals() {
     var targets = $$('.reveal, .stack');
@@ -1447,71 +1431,6 @@
       el.className = 'm-stat' + (m[1] ? ' ' + m[1] : '');
     }, 2300);
   }
-
-  /* ---------- dot grid ---------- */
-  (function grid() {
-    var cv = $('#grid');
-    if (!cv.getContext || calm) { cv.style.display = 'none'; return; }
-    var ctx = cv.getContext('2d');
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var W = 0, H = 0, GAP = 26;
-    var px = -9999, py = -9999, lastMove = 0;
-    var sparks = [];
-    var dirty = true;
-
-    function size() {
-      W = window.innerWidth; H = window.innerHeight;
-      cv.width = W * dpr; cv.height = H * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      dirty = true;
-    }
-    size();
-    window.addEventListener('resize', size);
-    window.addEventListener('pointermove', function (e) {
-      if (e.pointerType === 'touch') return;
-      px = e.clientX; py = e.clientY; lastMove = performance.now(); dirty = true;
-    }, { passive: true });
-    window.addEventListener('scroll', function () { dirty = true; }, { passive: true });
-
-    setInterval(function () {
-      if (document.hidden) return;
-      sparks.push({
-        x: Math.round(Math.random() * W / GAP) * GAP,
-        y: Math.round(Math.random() * H / GAP) * GAP,
-        life: 1,
-        at: Math.random() < 0.3
-      });
-      dirty = true;
-    }, 420);
-
-    function draw(now) {
-      requestAnimationFrame(draw);
-      var moving = now - lastMove < 1200;
-      if (!dirty && !moving && sparks.length === 0) return;
-      dirty = false;
-      ctx.clearRect(0, 0, W, H);
-      var R = 150, R2 = R * R;
-      var fade = moving ? 1 : Math.max(0, 1 - (now - lastMove - 1200) / 800);
-      for (var y = GAP / 2; y < H; y += GAP) {
-        for (var x = GAP / 2; x < W; x += GAP) {
-          var dx = x - px, dy = y - py, d2 = dx * dx + dy * dy;
-          var a = 0.07;
-          if (d2 < R2 && fade > 0) a += (1 - Math.sqrt(d2) / R) * 0.55 * fade;
-          ctx.fillStyle = 'rgba(51,255,0,' + a.toFixed(3) + ')';
-          ctx.fillRect(x - 1, y - 1, 2, 2);
-        }
-      }
-      for (var i = sparks.length - 1; i >= 0; i--) {
-        var s = sparks[i];
-        s.life -= 0.012;
-        if (s.life <= 0) { sparks.splice(i, 1); continue; }
-        ctx.fillStyle = (s.at ? 'rgba(45,212,191,' : 'rgba(51,255,0,') + (s.life * 0.7).toFixed(3) + ')';
-        ctx.fillRect(s.x + GAP / 2 - 1.5, s.y + GAP / 2 - 1.5, 3, 3);
-      }
-      if (fade > 0 || sparks.length) dirty = true;
-    }
-    requestAnimationFrame(draw);
-  })();
 
   /* ---------- Anchor viz: grade them all, anchor the one ---------- */
   (function viz() {
@@ -1652,44 +1571,181 @@
 
     var go = function (url) { setTimeout(function () { window.location.href = url; }, 500); };
     var since = new Date(1986, 0, 1);
+    var vim = false;
+    var c = function (t) { return '<span class="c">' + t + '</span>'; };
+    var at = function (t) { return '<span class="at">' + t + '</span>'; };
+    var dim = function (t) { return '<span class="d">' + t + '</span>'; };
+    var err = function (t) { return '<span class="err">' + t + '</span>'; };
+    function days() { return Math.floor((Date.now() - since) / 864e5).toLocaleString('en-GB'); }
+
+    var SITES = {
+      localghost: 'https://www.localghost.ai',
+      anchor: 'https://www.anchorterminal.com/',
+      letme: 'https://letme.dev',
+      'hard-truths': 'https://www.localghost.ai/hard-truths',
+      audit: 'https://www.anchorterminal.com/audit/',
+      github: 'https://github.com/vcealicu',
+      x: 'https://x.com/vcealicu',
+      linkedin: 'https://uk.linkedin.com/in/vcealicu'
+    };
+    var FILES = {
+      'llms.txt': '/llms.txt', 'robots.txt': '/robots.txt', 'humans.txt': '/humans.txt',
+      'index.md': '/index.md', 'sitemap.xml': '/sitemap.xml', 'security.txt': '/.well-known/security.txt'
+    };
+    var POSTS = [
+      ['caffeine-and-spite', 'Caffeine and Spite'],
+      ['what-the-box-does-now', 'What the Box Does Now, and What Each Part Costs'],
+      ['the-expensive-part', 'The Expensive Part Was Never the AI'],
+      ['should-not-possess', 'A Ghost Should Not Possess'],
+      ['index-not-a-person', 'An Index Is Not a Person'],
+      ['integration-tax', 'The Integration Tax'],
+      ['overhears', 'What the Ghost Owes the People It Overhears'],
+      ['day-one', 'Day One'],
+      ['before-you-ask', 'Before You Ask'],
+      ['the-bureaucracy-trap', 'The Bureaucracy Trap'],
+      ['how-memory-gets-made', 'How Memory Gets Made'],
+      ['critic-worth-listening-to', 'How to Build a Critic Worth Listening To'],
+      ['honeypot', 'The Honeypot Under Your Desk'],
+      ['model-trap', 'The Model Trap'],
+      ['dictator-brain', 'How to Prevent Building Your Own Dictator Brain'],
+      ['one-bad-quarter', 'One Bad Quarter'],
+      ['skillcraft', 'We Sold a Generation a Dream and Dismantled the Ladder While They Climbed'],
+      ['reckoning', 'The Reckoning, Hard Questions, Honest Answers'],
+      ['inflection', 'Inflection, The Window Is Closing']
+    ];
+    var FORTUNES = [
+      ['A thief can\'t make you type your password, a person with a wrench can.', 'The Honeypot Under Your Desk'],
+      ['AI sycophancy is a feature, because it drives the engagement.', 'How to Prevent Building Your Own Dictator Brain'],
+      ['A good model on a £500 card you own beats a fee that collects twice.', 'The Expensive Part Was Never the AI'],
+      ['I\'d rather wait for a number than wait for nothing.', 'What the Box Does Now'],
+      ['The test is right and the decoder is wrong, and neither has moved.', 'What the Box Does Now'],
+      ['A stranger scanning the box finds a web server having a bad day.', 'What the Box Does Now'],
+      ['Rankings can\'t be bought, and no amount of money moves a listing up or gets it promoted.', 'Anchor Terminal, about'],
+      ['Privacy is the power to selectively reveal oneself to the world.', 'A Cypherpunk\'s Manifesto, 1993']
+    ];
+    var DAEMONS = ['noted', 'framed', 'voiced', 'tallyd', 'synthd', 'cued', 'mistd', 'shadowd', 'secd', 'watchd'];
+
+    function pad(s, n) { s = String(s); while (s.length < n) s += ' '; return s; }
 
     var cmds = {
       help: function () {
-        return 'whoami      ls          cat &lt;file&gt;    open &lt;site&gt;\n' +
-               'uptime      date        roll [dN]     ghost\n' +
-               'anchor      grade &lt;x&gt;   sudo          clear     exit';
+        return c('about    ') + ' whoami  neofetch  git log  fortune  alignment\n' +
+               c('projects ') + ' ls [dir]  ps  whois &lt;x&gt;  grade &lt;x&gt;  anchor  ghost\n' +
+               c('files    ') + ' cat &lt;file&gt;  (llms.txt, robots.txt, humans.txt, index.md, sitemap.xml)\n' +
+               c('go       ') + ' open &lt;site&gt;  read &lt;n&gt;  contact\n' +
+               c('misc     ') + ' uptime  date  ping  roll [dN]  history  vim  sudo  clear  exit\n' +
+               dim('tab completes, up and down walk the history, esc closes');
       },
       whoami: function () { return 'vlad. founder, ex-CTO, chaotic good.\nRomanian by birth, British by accident.'; },
-      ls: function () { return '<span class="c">localghost/</span>  <span class="at">anchor/</span>  <span class="c">hard-truths/</span>  ccdata.tar.gz  opinions.txt  todo.md'; },
+      neofetch: function () {
+        var art = ['   .-.   ', '  (o o)  ', '  | O \\  ', '   \\   \\ ', '    `~~~\'', '         ', '         ', '         ', '         ', '         '];
+        var info = [
+          c('vlad') + '@' + c('cealicu'),
+          '------------',
+          c('OS') + '        static html, one file',
+          c('Host') + '      a NAS in a flat in London',
+          c('Kernel') + '    Go, Postgres, Redis, nginx',
+          c('Uptime') + '    ' + days() + ' days',
+          c('Packages') + '  0 (npm), 0 (trackers), 0 (cookies)',
+          c('Projects') + '  LocalGhost.ai, ' + at('Anchor Terminal'),
+          c('Previous') + '  CryptoCompare / CCData, 2014 to 2025',
+          c('Alignment') + ' chaotic good'
+        ];
+        return info.map(function (l, i) { return c(art[i].replace(/\\/g, '\\')) + '  ' + l; }).join('\n');
+      },
+      git: function (a) {
+        if (a[0] !== 'log') return a[0] ? 'git: \'' + esc(a[0]) + '\' is not a git command here. try git log' : 'usage: git log';
+        return [
+          [at('2026-09'), 'anchor', 'anchorterminal.com goes live, agents arrive before humans'],
+          [c('2025-12'), 'localghost', 'foundation posts written over Christmas'],
+          ['2024-10', 'ccdata', 'acquired by CoinDesk'],
+          ['2019   ', 'ccdata', 'exchange benchmark ships, after two years of iterations'],
+          ['2014   ', 'cryptocompare', 'initial commit, a side project'],
+          ['2009   ', 'london', 'moved in, started shipping financial data at ADVFN and LSBF']
+        ].map(function (r) { return r[0] + '  ' + dim(pad(r[1], 14)) + r[2]; }).join('\n');
+      },
+      fortune: function () {
+        var f = FORTUNES[(Math.random() * FORTUNES.length) | 0];
+        return '"' + esc(f[0]) + '"\n' + dim('  ' + esc(f[1]));
+      },
+      alignment: function () { return 'chaotic good. has been on every character sheet so far.'; },
+      ls: function (a) {
+        var d = (a[0] || '').replace(/\/$/, '');
+        if (!d) return c('localghost/') + '  ' + at('anchor/') + '  ' + c('hard-truths/') + '  ccdata.tar.gz  opinions.txt  todo.md\n' +
+          'llms.txt  robots.txt  humans.txt  index.md  sitemap.xml';
+        if (d === 'localghost') return DAEMONS.map(function (x) { return c('ghost.' + x); }).join('  ') + '\n' + dim('ten Go daemons, one job each. open localghost for the rest.');
+        if (d === 'anchor') return at('terminal/') + '  ' + at('letme/') + '  ' + at('reviews/') + '  ' + at('audits/') + '  llms.txt\n' + dim('open anchor, open letme, or open audit.');
+        if (d === 'hard-truths') return POSTS.slice(0, 10).map(function (p, i) { return dim(pad(i + 1, 3)) + p[1]; }).join('\n') +
+          '\n' + dim('... and ' + (POSTS.length - 10) + ' more. read <n> opens one.');
+        return err('ls: ' + esc(d) + ': no such directory');
+      },
+      ps: function () {
+        var rows = [dim('  PID  NAME              STATE')];
+        DAEMONS.forEach(function (d, i) { rows.push('  ' + (101 + i) + '  ' + c(pad('ghost.' + d, 18)) + 'running'); });
+        rows.push('  201  ' + at(pad('anchor.grader', 18)) + 'grading');
+        rows.push('  202  ' + at(pad('anchor.panel', 18)) + 'arguing about a C');
+        rows.push('  203  ' + at(pad('letme.router', 18)) + 'routing');
+        rows.push('  666  ' + pad('vlad', 18) + 'caffeinated');
+        return rows.join('\n');
+      },
+      whois: function (a) {
+        var k = (a[0] || '').toLowerCase().replace(/^www\.|\.(ai|com|dev|io)$/g, '');
+        var db = {
+          localghost: c('LocalGhost.ai') + '\nlocal-first personal AI on a box you own. MIT licensed.\nif the company disappears, the box keeps working.',
+          anchor: at('Anchor Terminal') + '\ngrades for everything agents run on, AA to F, from public evidence.\nrankings are never for sale.',
+          anchorterminal: null,
+          letme: at('letme.dev') + '\npicks the top-graded tool for an agent\'s task.\nbuilt for agents, there are no human pages.',
+          ccdata: 'CryptoCompare / CCData\ntwelve years, about seventy people, FCA benchmark authorisation.\nacquired by CoinDesk in October 2024.',
+          cryptocompare: null,
+          vlad: null
+        };
+        db.anchorterminal = db.anchor; db.cryptocompare = db.ccdata; db.vlad = cmds.whoami();
+        if (!k) return 'whois what? try localghost, anchor, letme, ccdata';
+        return db[k] || err('whois: no match for ' + esc(a[0]) + '. try localghost, anchor, letme, ccdata');
+      },
       cat: function (a) {
-        var f = (a[0] || '').replace(/\/$/, '');
-        if (!f) return '<span class="err">cat: which file? try ls</span>';
+        var f = (a[0] || '').replace(/^\.?\//, '').replace(/\/$/, '');
+        if (!f) return err('cat: which file? try ls');
         if (f === 'ccdata.tar.gz') return 'twelve years, compressed. extracted by CoinDesk in October 2024.';
         if (f === 'opinions.txt') return 'file too large to print. it is published in instalments as Hard Truths.';
         if (f === 'todo.md') return '- [x] sell a company\n- [x] build a box that keeps your data at home\n- [ ] grade every tool an agent can call\n- [ ] sleep (deprecated)';
-        if (f === 'localghost' || f === 'anchor' || f === 'hard-truths') return '<span class="err">cat: ' + esc(f) + ': is a directory. try open ' + esc(f) + '</span>';
-        return '<span class="err">cat: ' + esc(f) + ': no such file</span>';
+        if (f === 'localghost' || f === 'anchor' || f === 'hard-truths') return err('cat: ' + esc(f) + ': is a directory. try ls ' + esc(f));
+        if (f === '.well-known/security.txt') f = 'security.txt';
+        if (!FILES[f]) return err('cat: ' + esc(f) + ': no such file');
+        return fetch(FILES[f], { headers: { Accept: 'text/plain, text/markdown, */*' } }).then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          return r.text();
+        }).then(function (t) {
+          var lines = t.replace(/\s+$/, '').split('\n');
+          var more = lines.length - 40;
+          return esc(lines.slice(0, 40).join('\n')) + (more > 0 ? '\n' + dim('... ' + more + ' more lines at ' + FILES[f]) : '');
+        }).catch(function () { return err('cat: ' + esc(f) + ': could not read it right now'); });
       },
       open: function (a) {
-        var sites = {
-          localghost: 'https://www.localghost.ai',
-          anchor: 'https://www.anchorterminal.com/',
-          letme: 'https://letme.dev',
-          'hard-truths': 'https://www.localghost.ai/hard-truths',
-          github: 'https://github.com/vcealicu'
-        };
-        var k = (a[0] || '').replace(/\/$/, '');
-        if (!sites[k]) return 'open what? ' + Object.keys(sites).join(', ');
-        go(sites[k]);
-        return 'opening ' + sites[k] + ' ...';
+        var k = (a[0] || '').replace(/\/$/, '').toLowerCase();
+        if (!SITES[k]) return 'open what? ' + Object.keys(SITES).join(', ');
+        go(SITES[k]);
+        return 'opening ' + SITES[k] + ' ...';
       },
-      uptime: function () {
-        var days = Math.floor((Date.now() - since) / 864e5);
-        return 'up ' + days.toLocaleString('en-GB') + ' days, load average 2 startups, 1 boat, 0 cloud bills';
+      read: function (a) {
+        var n = parseInt(a[0], 10);
+        if (!(n >= 1 && n <= POSTS.length)) return 'read which one? ls hard-truths lists them, 1 to ' + POSTS.length;
+        var p = POSTS[n - 1];
+        go('https://www.localghost.ai/hard-truths/' + p[0]);
+        return 'opening "' + esc(p[1]) + '" ...';
       },
+      contact: function () {
+        return 'email   ' + c('vlad@localghost.ai') + '\nx       @vcealicu\ngithub  vcealicu\n' + dim('type open x, open github, or open linkedin. email works best.');
+      },
+      uptime: function () { return 'up ' + days() + ' days, load average 2 startups, 1 boat, 0 cloud bills'; },
       date: function () { return new Date().toString(); },
+      ping: function (a) {
+        var h = esc(a[0] || 'vladcealicu.com');
+        var t = (0.2 + Math.random() * 0.6).toFixed(2);
+        return 'PING ' + h + '\n64 bytes from ' + h + ': time=' + t + ' ms, trackers on the route=0\n' + dim('1 packet sent, 1 received, 0 sold');
+      },
       roll: function (a) {
-        var n = parseInt(String(a[0] || 'd20').replace(/^d/i, ''), 10);
+        var n = parseInt(String(a[0] || 'd20').replace(/^1?d/i, ''), 10);
         if (!(n > 1 && n <= 1000)) n = 20;
         var r = 1 + ((Math.random() * n) | 0);
         var s = 'd' + n + ' rolled ' + r + '.';
@@ -1697,10 +1753,15 @@
         else if (n === 20 && r === 1) s += ' natural 1. the deploy script asks for sudo.';
         return s;
       },
-      ghost: function () {
-        return '<span class="c">   .-.\n  (o o)   boo.\n  | O \\   your data stayed home.\n   \\   \\\n    `~~~\'</span>';
+      history: function () {
+        if (!hist.length) return dim('nothing yet. this history is in your tab and dies with it.');
+        return hist.map(function (h, i) { return dim(pad(i + 1, 4)) + esc(h); }).join('\n');
       },
-      anchor: function () { return '<span class="at">grade them all. anchor the one.</span>\ntry grade &lt;anything&gt;, or open anchor'; },
+      vim: function () { vim = true; return dim('-- vim --') + '\nyou are now in vim. good luck.'; },
+      ghost: function () {
+        return c('   .-.\n  (o o)   boo.\n  | O \\   your data stayed home.\n   \\   \\\n    `~~~\'');
+      },
+      anchor: function () { return at('grade them all. anchor the one.') + '\ntry grade &lt;anything&gt;, ls anchor, or open anchor'; },
       grade: function (a) {
         var x = a.join(' ').trim();
         if (!x) return 'grade what?';
@@ -1708,8 +1769,9 @@
         if (low === 'vlad' || low === 'me' || low === 'vladcealicu.com') return 'no. founders do not grade themselves. that is the whole point.';
         if (low === 'localghost' || low === 'letme') return 'listed and graded on Anchor Terminal like everything else, with a founder disclosure at the bottom.';
         var g = ['AA', 'A', 'BB', 'B', 'C', 'D', 'E', 'F'][(x.length * 7 + x.charCodeAt(0)) % 8];
-        return esc(x) + ': ' + g + ' (made up, this is a shell. the real ones are sourced)';
+        return esc(x) + ': ' + g + dim(' (made up, this is a shell. the real ones are sourced)');
       },
+      npm: function () { return 'added 0 packages, audited 0 packages in 0s\n' + dim('this site has no dependencies, which is the only audit that never fails'); },
       sudo: function () { return 'vlad is not in the sudoers file. this incident will be reported to nobody, there are no trackers.'; },
       rm: function () { return 'it is one static html file on a NAS in my flat. I would redeploy before the kettle boils.'; },
       coffee: function () { return '418 I\'m a teapot'; },
@@ -1720,7 +1782,32 @@
     cmds.hi = cmds.hello;
     cmds.quit = cmds.exit;
     cmds.cd = cmds.open;
+    cmds.less = cmds.more = cmds.head = cmds.cat;
+    cmds.nvim = cmds.vi = cmds.emacs = cmds.vim;
+    cmds.fastfetch = cmds.neofetch;
+    cmds.top = cmds.htop = cmds.ps;
+    cmds.email = cmds.contact;
+    cmds.d20 = function () { return cmds.roll(['d20']); };
     cmds['make'] = function (a) { return a[0] === 'coffee' ? cmds.coffee() : 'make: nothing to be done.'; };
+    var VISIBLE = ['help', 'whoami', 'neofetch', 'git', 'fortune', 'alignment', 'ls', 'ps', 'whois', 'grade', 'anchor', 'ghost',
+                   'cat', 'open', 'read', 'contact', 'uptime', 'date', 'ping', 'roll', 'history', 'vim', 'sudo', 'clear', 'exit'];
+    var ARGS = {
+      cat: Object.keys(FILES).concat(['todo.md', 'opinions.txt', 'ccdata.tar.gz']),
+      open: Object.keys(SITES), cd: Object.keys(SITES),
+      ls: ['localghost', 'anchor', 'hard-truths'],
+      whois: ['localghost', 'anchor', 'letme', 'ccdata'],
+      git: ['log']
+    };
+
+    function run(line) {
+      if (vim) {
+        if (/^:(q|q!|wq|x)$/.test(line)) { vim = false; return 'you have left vim. most people never do.'; }
+        return dim('-- vim --') + ' ' + (line.charAt(0) === ':' ? err('E492: Not an editor command: ' + esc(line.slice(1))) : 'this is not insert mode. try :q');
+      }
+      var parts = line.split(/\s+/);
+      var fn = cmds[parts[0].toLowerCase()];
+      return fn ? fn(parts.slice(1)) : err(esc(parts[0]) + ': command not found. try help');
+    }
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -1728,15 +1815,34 @@
       input.value = '';
       if (!line) return;
       hist.push(line); hi = hist.length;
-      print('<span class="c">$</span> ' + esc(line));
-      var parts = line.split(/\s+/);
-      var fn = cmds[parts[0].toLowerCase()];
-      var res = fn ? fn(parts.slice(1)) : '<span class="err">' + esc(parts[0]) + ': command not found. try help</span>';
-      if (res !== null && res !== undefined) print(res);
+      print((vim ? '<span class="c">:</span> ' : '<span class="c">$</span> ') + esc(line));
+      var res = run(line);
+      if (res && typeof res.then === 'function') res.then(print);
+      else if (res !== null && res !== undefined) print(res);
     });
+
+    function complete() {
+      var v = input.value.replace(/^\s+/, '');
+      var parts = v.split(/\s+/);
+      var pool, word;
+      if (parts.length <= 1) { pool = VISIBLE; word = parts[0] || ''; }
+      else { pool = ARGS[parts[0].toLowerCase()] || []; word = parts[parts.length - 1]; }
+      var hits = pool.filter(function (x) { return x.indexOf(word.toLowerCase()) === 0; });
+      if (hits.length === 1) {
+        parts[parts.length - 1] = hits[0];
+        input.value = parts.join(' ') + ' ';
+      } else if (hits.length > 1) {
+        var pre = hits.reduce(function (p, h) { while (h.indexOf(p) !== 0) p = p.slice(0, -1); return p; });
+        if (pre.length > word.length) { parts[parts.length - 1] = pre; input.value = parts.join(' '); }
+        else print(dim(hits.join('  ')));
+      }
+    }
+
     input.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowUp' && hi > 0) { hi--; input.value = hist[hi]; e.preventDefault(); }
       else if (e.key === 'ArrowDown') { hi = Math.min(hist.length, hi + 1); input.value = hist[hi] || ''; e.preventDefault(); }
+      else if (e.key === 'Tab') { e.preventDefault(); complete(); }
+      else if (e.key === 'l' && e.ctrlKey) { e.preventDefault(); out.innerHTML = ''; }
       else if (e.key === 'Escape') close();
       e.stopPropagation();
     });
@@ -1751,10 +1857,8 @@
   })();
 
   /* ---------- go ---------- */
-  boot(function () {
-    heroStart();
-    reveals();
-  });
+  heroStart();
+  reveals();
 })();
 </script>
 

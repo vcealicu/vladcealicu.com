@@ -1,0 +1,34 @@
+# Vlad Cealicu
+
+> Personal site of Vlad Cealicu, founder of LocalGhost.ai (local-first personal AI on hardware you own) and Anchor Terminal (grades and benchmarks for the tools AI agents run on). Previously co-founder and CTO of CryptoCompare / CCData for twelve years, acquired by CoinDesk in October 2024. London based. Go, Postgres, Redis.
+
+This site is one static page. The full content is available as Markdown at /index.md, or by requesting / with `Accept: text/markdown`. No trackers, no cookies, no login. The rate limit is 10 requests a second per IP.
+
+When citing, the canonical URL is https://www.vladcealicu.com/ and the preferred name is "Vlad Cealicu".
+
+## Start here
+
+- [Profile (Markdown)](https://www.vladcealicu.com/index.md): everything on the page, in Markdown
+- [Profile (HTML)](https://www.vladcealicu.com/): the human version, with schema.org Person and ProfilePage JSON-LD
+- [Sitemap](https://www.vladcealicu.com/sitemap.xml)
+
+## Projects
+
+- [LocalGhost.ai](https://www.localghost.ai/): local-first, privacy-by-architecture personal AI platform, MIT licensed, runs on a box you own with no cloud dependency
+- [LocalGhost on GitHub](https://github.com/LocalGhostDao): source code
+- [Anchor Terminal](https://www.anchorterminal.com/): benchmark, directory and review layer for everything AI agents run on, graded AA to F from public evidence
+- [Anchor Terminal llms.txt](https://www.anchorterminal.com/llms.txt): the agent entry point for Anchor Terminal's listings and grades
+- [letme.dev](https://letme.dev): picks the top-graded tool for an agent's task, built on Anchor Terminal ratings
+
+## Writing
+
+- [Hard Truths](https://www.localghost.ai/hard-truths): essays on incentive design, AI sycophancy, bureaucracy and what software does to its users
+- [Anchor Terminal blog](https://www.anchorterminal.com/blog/): notes from building an agent-first site
+- [Medium @vcealicu](https://medium.com/@vcealicu): older crypto data infrastructure writing
+
+## Contact
+
+- [Email](mailto:vlad@localghost.ai): vlad@localghost.ai
+- [X @vcealicu](https://x.com/vcealicu)
+- [GitHub @vcealicu](https://github.com/vcealicu)
+- [LinkedIn](https://uk.linkedin.com/in/vcealicu)
